@@ -1,0 +1,2885 @@
+
+           {
+            "auditplans":[
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Bouve",
+                 "AuditArea": "Bouve College Health Sciences",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Bouve",
+                 "AuditArea": "Center for Drug Discovery",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Bouve",
+                 "AuditArea": "Center for Pharmaceutical Biotechnology (CPBN)",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Bouve",
+                 "AuditArea": "Health in Motion Van",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Bouve",
+                 "AuditArea": "Institute on Urban Health Research (IUHR)",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Bouve",
+                 "AuditArea": "Nursing Department",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Bouve",
+                 "AuditArea": "Pharmacy Department",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Bouve",
+                 "AuditArea": "Speech-Language & Hearing Center",
+                 "Description": "included in Bouve 2013",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Arts, Media, & Design",
+                 "AuditArea": "College of Arts, Media and Design",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Computer & Information Science",
+                 "AuditArea": "College of Computer Science",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Computer & Information Science",
+                 "AuditArea": "Institute for Information Assurance",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Engineering",
+                 "AuditArea": "Bioengineering Department",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Engineering",
+                 "AuditArea": "Censsis including ALERT",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Engineering",
+                 "AuditArea": "Center for High-Rate Nanomanufacturing",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Engineering",
+                 "AuditArea": "Center for VOTERS (Versatile Onboard Traffic Embedded Roaming Sensors)",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Engineering",
+                 "AuditArea": "Chemical Engineering Department",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Engineering",
+                 "AuditArea": "Civil & Environmental Engineering Department",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Engineering",
+                 "AuditArea": "College of Engineering Procards",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Engineering",
+                 "AuditArea": "College of Engineering",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Engineering",
+                 "AuditArea": "Electrical & Computer Engineering Department",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Engineering",
+                 "AuditArea": "Kostas Nanofabrication",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Engineering",
+                 "AuditArea": "Mechanical & Industrial Engineering Department",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Engineering",
+                 "AuditArea": "PROTECT",
+                 "Description": "part of Chemi\\Chem Biology",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Engineering",
+                 "AuditArea": "STEM Education Center",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Professional Studies",
+                 "AuditArea": "Balfour Academy",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Professional Studies",
+                 "AuditArea": "Center for the Study of Sport in Society",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Professional Studies",
+                 "AuditArea": "College of Professional Studies",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Professional Studies",
+                 "AuditArea": "CPS International Programs",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Professional Studies",
+                 "AuditArea": "Department of Education",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Professional Studies",
+                 "AuditArea": "Global Pathways",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Professional Studies",
+                 "AuditArea": "Kaplan",
+                 "Description": "International Arrangements (i.e. Global Pathways)",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Professional Studies",
+                 "AuditArea": "NU in",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Professional Studies",
+                 "AuditArea": "Part Time Faculty",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Professional Studies",
+                 "AuditArea": "Workload & Faculty Extra Comp",
+                 "Description": "Special 2014",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Professional Studies",
+                 "AuditArea": "XN program",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Science",
+                 "AuditArea": "Antimicrobial Discovery Center",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Science",
+                 "AuditArea": "Barnett Institute",
+                 "Description": "part of Chemi\\Chem Biology",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Science",
+                 "AuditArea": "Biology Dept",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Science",
+                 "AuditArea": "Center for CIRCS",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Science",
+                 "AuditArea": "Center for Complex Network Research (CCNR)",
+                 "Description": "included in Physics",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Science",
+                 "AuditArea": "Center for Translational NeuroImaging (CTNI)",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Science",
+                 "AuditArea": "Chemistry & Chemical Biology Dept",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Science",
+                 "AuditArea": "College of Science",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Science",
+                 "AuditArea": "Electronic Materials Research Institute (eMRI)",
+                 "Description": "included in Physics",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Science",
+                 "AuditArea": "Marine & Environmental Sciences Dept",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Science",
+                 "AuditArea": "Marine Science Center",
+                 "Description": "included in COS",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Science",
+                 "AuditArea": "Math Dept",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Science",
+                 "AuditArea": "Network Science Institute",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Science",
+                 "AuditArea": "New England Inflammation and Tissue Protection Institute",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Science",
+                 "AuditArea": "Northeastern University Center for NUCRET",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Science",
+                 "AuditArea": "Physics Dept",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Science",
+                 "AuditArea": "Psychology Dept",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Science",
+                 "AuditArea": "Three Seas Program",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Social Science & Humanities",
+                 "AuditArea": "Brudnick Center on Violence and Conflict",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Social Science & Humanities",
+                 "AuditArea": "Center for Criminal Justice Policy Research",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Social Science & Humanities",
+                 "AuditArea": "College of Social Sciences and Humanities",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Social Science & Humanities",
+                 "AuditArea": "Dukakis Center for Urban and Regional Policy (CURP)",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "College of Social Science & Humanities",
+                 "AuditArea": "Humanities Center",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "D'Amore McKim",
+                 "AuditArea": "Center for Family Business",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "D'Amore McKim",
+                 "AuditArea": "D'Amore McKim",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "D'Amore McKim",
+                 "AuditArea": "DMSOB International Programs",
+                 "Description": "BSIB (4th yr) & International Field Study Programs (10 day trip)",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "D'Amore McKim",
+                 "AuditArea": "Embanet",
+                 "Description": "Dmaore McKim, Blackboard",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "D'Amore McKim",
+                 "AuditArea": "IDEA",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "D'Amore McKim",
+                 "AuditArea": "Institute for Global Innovation Management",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Lifelong Learning Network",
+                 "AuditArea": "Charlotte",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Lifelong Learning Network",
+                 "AuditArea": "LEVEL",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Lifelong Learning Network",
+                 "AuditArea": "Lifelong Learning Network Operations",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Lifelong Learning Network",
+                 "AuditArea": "New Ventures",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Lifelong Learning Network",
+                 "AuditArea": "San Jose",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Lifelong Learning Network",
+                 "AuditArea": "Seattle",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Lifelong Learning Network",
+                 "AuditArea": "Toronto",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "African American Masters Residence in Artists Program (AAMARP)",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "Burlington Innovation Campus",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "Career Services",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "Center for Community Health Education Research and Service (CCHERS)",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "Coastal Sustainability Institute",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "Coop",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "Core Facilities",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "Cybersecurity Institute",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "Discretionary Accounts (Start Up\\Overhead)",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "Faculty Extra Comp, Summer Salary & Off Contract Salary",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "Fee for Service",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "Global Experience Office - Dialogues",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "Global Experience Office",
+                 "Description": "OISP, Dialogues",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "Global Resilience Institute",
+                 "Description": "Feb 14, 2017\n\nDear Colleagues,\nI am delighted to announce the establishment of the Global Resilience Institute at Northeastern.  This new institute is a university-wide initiative involving all nine colleges and will be led by Professor Stephen Flynn as its founding director.  Its mission is to devise and deploy interdisciplinary resilience solutions that allow individuals, communities, systems, and societies to adapt and thrive in an increasingly turbulent world.\nThe Global Resilience Institute builds significantly on Northeastern's growing international educational network and research profile in the critical areas of health, security and sustainability. It will facilitate new cross-college collaborations and expand the networks of interdisciplinary resilience scholars across campus and around the world.  \nIn addition to Steve, the leadership team of the Global Resilience Institute includes Dr. Philip Anderson as the Associate Director for Research and Innovation, Professor Jennie Stephens, as Associate Director of Strategic Research Collaborations, and Professor Mark Patterson, as Associate Director and Chief Technology Officer. \nThe Institute responds to the need at all levels for prioritizing resilience in the face of slow-moving and sudden disruptions to the complex and increasingly interdependent systems upon which we depend.  Resilience is the ability to prepare for and adapt to changing conditions, and to withstand and recover rapidly from any disruptive event.  At the individual level, it involves identifying and nurturing the capacity to cope well with stresses ranging from traumas to aging.  Addressing resilience requires engaging diverse stakeholders, understanding complex motivations, and aligning incentives and governance to facilitate widespread adoption of the tools, designs, and protocols required for mitigating risks and learning from and adapting to extreme events when they occur.   In short, it requires engagement of the research and educational capabilities of the entire university community.\nOver the coming months and years, the Global Resilience Institute will support multi-disciplinary, cross-college research in eight strategic focus areas that draws on and helps to further advance the diversity of resilience-related expertise across the Northeastern academic community: \n1. Resilience tools: Development of models, visualization, and simulation tools to support urban planning; public policy; community development, public safety, security, and emergency management; and post-disaster recovery and adaptation\n2. Resilience design: Research on cross-sector design of infrastructure, systems, and networks that prepare for climate change and other disruptive hazards – both human-made and naturally-occurring\n3. Resilience governance: Research on adaptable networked organizations, public, private and non-governmental organizations interactions, to manage increasingly complex and interdependent systems that operate across multiple political jurisdictions\n4. Resilience incentives: Research on the role of regulations, standards, codes, and market-based incentives such as insurance and reinsurance that can advance early and widespread adoption of resilience best practices\n5. Individual resilience: Research on individual capacity to cope and respond to trauma, adversity, and aging, including linkages between physical and emotional health\n6. Measuring resilience: Development of tools, models, and methodologies to quantitatively evaluate the efficacy and cost-effectiveness of resilience solutions.\n7. Community resilience: Research on social interactions networks and communication to include the role of social media within communities; cultural resilience; inclusive well-being and prosperity for all members of a community; barriers that contribute to growing socio-economic inequality, racial and gender exclusion, and other forms of disparity in vulnerabilities and opportunities\n8.   Security and resilience: Research on t",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "Gordon Institute",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "Graduate Student Employment\\Classification",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "Health Careers Academy",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "Institutional Research & Data Reporting",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "International Study Programs -Traditional Programs",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "ISEC",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "Kostas Research Institute",
+                 "Description": "include lease revenue",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "Libraries",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "Office of Institutional Diversity & Inclusion",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "Orbis",
+                 "Description": "Angel Memo",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "PhD Network",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "Provost Led Institutes",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "Research Centers",
+                 "Description": "(Establishing, Managing & Reviewing)",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "SVP Research (DIV 35)",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "Technology Transfer",
+                 "Description": "Patents, Ventures, Licensing",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "Tenure Review Process",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "Undergraduate Education (DIV36)",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Provost",
+                 "AuditArea": "Visiting Faculty",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Registrar",
+                 "AuditArea": "FERPA Compliance",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Registrar",
+                 "AuditArea": "Student Record Management",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Registrar",
+                 "AuditArea": "Transfer Credits",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "School of Law",
+                 "AuditArea": "Cooperative Income Sharing Program",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "School of Law",
+                 "AuditArea": "Law School",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Sponsored Research",
+                 "AuditArea": "Animal Care Program",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Sponsored Research",
+                 "AuditArea": "Award Acceptance Stage",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Sponsored Research",
+                 "AuditArea": "Billings and Collections",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Sponsored Research",
+                 "AuditArea": "Cost Sharing",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Sponsored Research",
+                 "AuditArea": "Cost Transfer",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Sponsored Research",
+                 "AuditArea": "Effort Reporting",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Sponsored Research",
+                 "AuditArea": "Human Subjects Research Review",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Sponsored Research",
+                 "AuditArea": "Indirect Cost Rate",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Sponsored Research",
+                 "AuditArea": "Interdisciplinary Research",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Sponsored Research",
+                 "AuditArea": "Lab Safety",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Sponsored Research",
+                 "AuditArea": "Massachusetts Green High Performance Computing Center",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Sponsored Research",
+                 "AuditArea": "NSF Compliance",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Sponsored Research",
+                 "AuditArea": "Post Award - Project Closeout",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Sponsored Research",
+                 "AuditArea": "Property & Equipment",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Sponsored Research",
+                 "AuditArea": "Proposal & Pre-Award Process",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Sponsored Research",
+                 "AuditArea": "Research Administration",
+                 "Description": "DIV35",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Sponsored Research",
+                 "AuditArea": "Research Compliance",
+                 "Description": 2017,
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Sponsored Research",
+                 "AuditArea": "Research Finance",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Sponsored Research",
+                 "AuditArea": "Responsible Conduct of Research",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Academic",
+                 "Owner": "Sponsored Research",
+                 "AuditArea": "Sub-Recipient & Monitoring",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "College of Professional Studies",
+                 "AuditArea": "DegreeWorks Application",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Enrollment",
+                 "AuditArea": "Banner AR",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Enrollment",
+                 "AuditArea": "Enhanced Customer Service (ECX)",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Enrollment",
+                 "AuditArea": "Financial Aid Systems",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Enrollment",
+                 "AuditArea": "Graduate Admissions Systems",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Enrollment",
+                 "AuditArea": "Marketo",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Enrollment",
+                 "AuditArea": "OGS - Sunapsis",
+                 "Description": "included in SEVIS",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Enrollment",
+                 "AuditArea": "Student Employment System",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Enrollment",
+                 "AuditArea": "Undergraduate Admission Systems",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Facillities",
+                 "AuditArea": "eBuilder",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Facillities",
+                 "AuditArea": "Facilities Systems",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Finance",
+                 "AuditArea": "Banner Finance",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Finance",
+                 "AuditArea": "Campus Loan Manager System",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Finance",
+                 "AuditArea": "CashNet",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Finance",
+                 "AuditArea": "Concur",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Finance",
+                 "AuditArea": "TM1",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Human Resources",
+                 "AuditArea": "Banner HR",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Human Resources",
+                 "AuditArea": "PeopleAdmin",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Human Resources",
+                 "AuditArea": "Talent Acquisition System",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Human Resources",
+                 "AuditArea": "Vacation & Sick Time Tracking",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Banner 9",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Banner Shared Data",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Business Intelligence",
+                 "Description": "COGNOS - Blackboard Analytics",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Change Management",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Classroom Technology",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Computer Operations",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Cybersecurity",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Data Center",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Data Privacy (Red Flags, Mass Law)",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Database Review",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Directory Services",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Disaster Recovery",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Email System - Faculty\\Staff",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Email System - Students",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Hardware/Software Obsolescence",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "IAM (Identity Access Management)",
+                 "Description": "Previously - Identity Management Process including sponsored accounts",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Information Security Policies, Discarded PCs, PDAs, Laptops, Removable Media",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "IT Governance",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "IT Vendors",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "ITS Help Desk",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Mobile Applications",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Network Security -NUNET",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Network Security",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Network Security-NUWAVE",
+                 "Description": "network security audit",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Network Security-RESNET",
+                 "Description": "network security audit",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "NEU Portal",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Offshore",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "PwC External IT Audit",
+                 "Description": "Annual review",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Q Share\\Department Share",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "ResNet",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Salesforce Corporate Relations",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Salesforce",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Service Now",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Sharepoint",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Software Licensing",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Sponsored Accounts",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Student Computer Labs",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Systems Development",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Telephone Services",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "UNIX\\Linux",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Website Review",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Windows Servers",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Information Technology Services",
+                 "AuditArea": "Wireless Guest Network",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Procurement",
+                 "AuditArea": "myMarketPlace",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Provost",
+                 "AuditArea": "Coop System",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Provost",
+                 "AuditArea": "Learning Management Systems",
+                 "Description": "Blackboard",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Provost",
+                 "AuditArea": "ODS",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Provost",
+                 "AuditArea": "SAIL (Self Authored Integrated Learning)",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Public Safety",
+                 "AuditArea": "Public Safety Systems (ARMS)",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Registrar",
+                 "AuditArea": "Banner Student System",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Registrar",
+                 "AuditArea": "Degree Audit Systems",
+                 "Description": "DARS",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Sponsored Research",
+                 "AuditArea": "COEUS",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Sponsored Research",
+                 "AuditArea": "ePaws",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "eClinicalWorks",
+                 "Description": "inlcuded in UHCS",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "Husky Card\\One Card",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "Residential Management System",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "Ticketing System",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "IT",
+                 "Owner": "University Advancement",
+                 "AuditArea": "Banner Advancement",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Business Services",
+                 "AuditArea": "Bookstore",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Business Services",
+                 "AuditArea": "Conference Centers",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Business Services",
+                 "AuditArea": "Credit Union",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Business Services",
+                 "AuditArea": "Dining Services",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Business Services",
+                 "AuditArea": "Husky Card - Debit Card Use\\Vendors",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Business Services",
+                 "AuditArea": "Leased Facilities (Boston)",
+                 "Description": "NEU is the lessee\n- leases space in Boston for residential use, etc",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Business Services",
+                 "AuditArea": "Leased Facilities (NEU Owned)",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Business Services",
+                 "AuditArea": "Leased Facilities (Outside Boston)",
+                 "Description": "NEU is the lessee\nNYC for co-op\nSeattle\nCalifornia",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Business Services",
+                 "AuditArea": "Mail Services",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Business Services",
+                 "AuditArea": "Parking",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Business Services",
+                 "AuditArea": "University Press",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "External Affairs",
+                 "AuditArea": "External Affairs",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "External Affairs",
+                 "AuditArea": "Social Media",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Facillities",
+                 "AuditArea": "Auto Maintenance",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Facillities",
+                 "AuditArea": "Contracted Cleaning Services",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Facillities",
+                 "AuditArea": "Deferred Maintenance",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Facillities",
+                 "AuditArea": "Facilities  - New Construction",
+                 "Description": "Cbiz Tofias",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Facillities",
+                 "AuditArea": "Facilities - Renovations",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Facillities",
+                 "AuditArea": "Facilities - Utilities",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Facillities",
+                 "AuditArea": "Facilities Administration",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Facillities",
+                 "AuditArea": "Facilities Customer Service",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Facillities",
+                 "AuditArea": "Facilities Procard",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Facillities",
+                 "AuditArea": "Facilities Trades\\Shops",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Facillities",
+                 "AuditArea": "Facilities Vendor Bidding",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Facillities",
+                 "AuditArea": "Lock Shop & Key Requests",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Facillities",
+                 "AuditArea": "Transportation, Receiving and Warehousing",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Facillities",
+                 "AuditArea": "Vehicle Fuel Management",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Facillities",
+                 "AuditArea": "Warehouse",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Finance",
+                 "AuditArea": "Annual Travel & Expense",
+                 "Description": "Annual review",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Finance",
+                 "AuditArea": "Buyer Initiated Payments",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Finance",
+                 "AuditArea": "Cash Management",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Finance",
+                 "AuditArea": "Cash Receipt Testing for PwC",
+                 "Description": "2012, 2011",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Finance",
+                 "AuditArea": "Concur",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Finance",
+                 "AuditArea": "Contracts",
+                 "Description": "includes signature authority",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Finance",
+                 "AuditArea": "Electronic Payments",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Finance",
+                 "AuditArea": "Endowment Management",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Finance",
+                 "AuditArea": "Fixed Assets & Physical Inventory",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Finance",
+                 "AuditArea": "Independent Contractor Review",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Finance",
+                 "AuditArea": "Investments",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Finance",
+                 "AuditArea": "Payment Card Industry",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Finance",
+                 "AuditArea": "Procurement Card",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Finance",
+                 "AuditArea": "Procurement Services\\Purchasing",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Finance",
+                 "AuditArea": "Student Loan Collections",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Finance",
+                 "AuditArea": "Tax Compliance  (UBIT)",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Finance",
+                 "AuditArea": "University Budget Process",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Finance",
+                 "AuditArea": "University Cell Phones & Data Plans",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Finance",
+                 "AuditArea": "Wire Transfer Process",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "General Counsel",
+                 "AuditArea": "Conflict of Interest",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "General Counsel",
+                 "AuditArea": "Copyright Laws",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "General Counsel",
+                 "AuditArea": "Export Control Compliance",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "General Counsel",
+                 "AuditArea": "GDPR (General Data Protection Regulation)",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "General Counsel",
+                 "AuditArea": "HIPPA Compliance",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "General Counsel",
+                 "AuditArea": "Immigration",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "General Counsel",
+                 "AuditArea": "Legal Expenses",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "General Counsel",
+                 "AuditArea": "Licensure & Regulatory Affairs",
+                 "Description": "50 state authorization, global campuses - managed by Bradley",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "General Counsel",
+                 "AuditArea": "OGC Departmental Review",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "General Counsel",
+                 "AuditArea": "Policy Management",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "General Counsel",
+                 "AuditArea": "Record Retention",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "General Counsel",
+                 "AuditArea": "Restricted Party Screening",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "General Counsel",
+                 "AuditArea": "Title IX",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Human Resources",
+                 "AuditArea": "Background Checks",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Human Resources",
+                 "AuditArea": "Benefits  -  Retirement Benefits",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Human Resources",
+                 "AuditArea": "Benefits - Health and Dental Benefits",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Human Resources",
+                 "AuditArea": "Benefits - Other",
+                 "Description": "(Non Medical or Non Retirement)",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Human Resources",
+                 "AuditArea": "Day Care",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Human Resources",
+                 "AuditArea": "Executive Compensation",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Human Resources",
+                 "AuditArea": "Extra Compensation",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Human Resources",
+                 "AuditArea": "Human Resources",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Human Resources",
+                 "AuditArea": "I-9",
+                 "Description": "immigration audit",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Human Resources",
+                 "AuditArea": "Labor Relations",
+                 "Description": "see EMPLOYEE AND LABOR MANAGEMENT RELATIONS AUDIT WORK PROGRAM on Knowledgeleader\n\n•Obtain an understanding of the employee and labor management relations process.\n•Evaluate the effectiveness and efficiency of the employee and labor management relations process and related internal controls.\n•Evaluate the quality and integrity of information systems supporting the employee and labor management relations process.",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Human Resources",
+                 "AuditArea": "Offer Letters",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Human Resources",
+                 "AuditArea": "Overtime",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Human Resources",
+                 "AuditArea": "Payroll for Remote Employees",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Human Resources",
+                 "AuditArea": "Payroll FT Faculty & Staff",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Human Resources",
+                 "AuditArea": "Payroll",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Human Resources",
+                 "AuditArea": "PT Faculty - Union",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Human Resources",
+                 "AuditArea": "Recruiting\\Senior Searches",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Human Resources",
+                 "AuditArea": "Teaching for Admin Professional Staff",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Human Resources",
+                 "AuditArea": "Temporary Non Student Employees",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Human Resources",
+                 "AuditArea": "Tuition Remission",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Human Resources",
+                 "AuditArea": "Vacation & Sick Time Tracking",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Information Services",
+                 "AuditArea": "Information Technology Services",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Information Services",
+                 "AuditArea": "ITS Chargebacks",
+                 "Description": "added as result of ITS audit  (see A-Z Services for info)",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "President's Office",
+                 "AuditArea": "President's Office",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Public Safety",
+                 "AuditArea": "Clery Act",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Public Safety",
+                 "AuditArea": "Crisis Management & Communications",
+                 "Description": "Control Assessment",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Public Safety",
+                 "AuditArea": "Outsourced Security Services",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Public Safety",
+                 "AuditArea": "Public Safety",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Public Safety",
+                 "AuditArea": "Travel Registry",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Risk Management",
+                 "AuditArea": "Environmental Health and Safety Program",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Risk Management",
+                 "AuditArea": "Insurance Policies & Claims",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Risk Management",
+                 "AuditArea": "Lab Safety",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Risk Management",
+                 "AuditArea": "Minors on Campus",
+                 "Description": "part of Background Checks",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Risk Management",
+                 "AuditArea": "NEU Vehicles",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "Risk Management",
+                 "AuditArea": "Worker's Compensation",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "University Advancement",
+                 "AuditArea": "Alumni Chapters",
+                 "Description": "Control Assessment 2013",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "University Advancement",
+                 "AuditArea": "Alumni Relations",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "University Advancement",
+                 "AuditArea": "Annual Fund",
+                 "Description": "formerly Call Center & Ruffalo Cody",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "University Advancement",
+                 "AuditArea": "Conference & Event Planning for Internal Groups",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "University Advancement",
+                 "AuditArea": "Donor Compliance",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "University Advancement",
+                 "AuditArea": "Planned Giving",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "University Advancement",
+                 "AuditArea": "Pledge & Gift Processing",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "University Advancement",
+                 "AuditArea": "Student Alumni Association",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Operations",
+                 "Owner": "University Advancement",
+                 "AuditArea": "University Advancement",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Athletics",
+                 "AuditArea": "Athletics Administration",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Athletics",
+                 "AuditArea": "Athletics Camps",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Athletics",
+                 "AuditArea": "Athletics Campus Recreation",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Athletics",
+                 "AuditArea": "Athletics Department NCAA Compliance",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Athletics",
+                 "AuditArea": "Athletics Expenses",
+                 "Description": "included in Dept review",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Athletics",
+                 "AuditArea": "Athletics Procards",
+                 "Description": "included in Dept review",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Athletics",
+                 "AuditArea": "Athletics Revenue",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Athletics",
+                 "AuditArea": "Athletics Ticketing",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Athletics",
+                 "AuditArea": "Athletics Varsity Club",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Athletics",
+                 "AuditArea": "Club Sports",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Enrollment",
+                 "AuditArea": "Call Center",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Enrollment",
+                 "AuditArea": "Office of Global Services",
+                 "Description": "formerly ISSI",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Enrollment",
+                 "AuditArea": "Undergraduate Admissions",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Financial Aid",
+                 "AuditArea": "Awards & Disbursements",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Financial Aid",
+                 "AuditArea": "Student Employment",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Financial Aid",
+                 "AuditArea": "Student Loans",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Financial Aid",
+                 "AuditArea": "Verification",
+                 "Description": "special 2014",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Financial Aid",
+                 "AuditArea": "Veteran's Benefits",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Accounts",
+                 "AuditArea": "Bad Debts, Credits, Abandonded Property & Allowances",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Accounts",
+                 "AuditArea": "Student Billing, Tuition, Room, Board & Other Fees",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "African American Institute",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "AfterHours",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "Asian American Institute",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "Blackman Auditorium",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "Commencement",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "Conference & Event Planning for External Groups",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "Disability Resource Center",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "Husky Card - Meal Plans",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "Latino Cultural Center",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "New Student Orientation",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "NU Ticket Office",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "Office for University Equity & Compliance",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "Orientation",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "Resident Student Association",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "Residential Life Summer Conferences",
+                 "Description": "Control Assessment 2013",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "Residential Life",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "ROTC",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "Spiritual Center",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "Spiritual Life",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "Student Affairs (Center\\Institute in DIV06)",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "Student Affairs Business Office",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "Student Athlete Support Services",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "Student Conduct & Conflict Resolution",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "Student Government",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "Student Health Plan",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "Student Organizations",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "Torch Program",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "University Healthcare and Counseling",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "Van Services & Student Drivers",
+                 "Description": "",
+                 "": ""
+                 },
+                 {
+                 "University": "Northeastern",
+                 "UniversityArea": "Student",
+                 "Owner": "Student Affairs",
+                 "AuditArea": "We Care Program",
+                 "Description": "",
+                 "": ""
+                 }
+                 ]
+             }

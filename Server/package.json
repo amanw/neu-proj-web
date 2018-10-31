@@ -1,0 +1,22 @@
+{
+  "name": "neu-proj-web",
+  "version": "1.0.0",
+  "description": "Web API's for Northeastern Auditing and Advisory Services.",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/server.js"
+  },
+  "author": "Aman Wangde",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.2",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.3.8",
+    "node-pre-gyp": "^0.11.0",
+    "nodemon": "^1.18.5",
+    "request": "^2.88.0"
+  }
+}
