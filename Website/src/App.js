@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
+import { Provider } from 'react-redux';
+import configureStore from './store/configureStore';
+import DevTools from './containers/devTools';
 import logo from './logo.svg';
 import './App.css';
+
+let store = configureStore();
 
 class App extends Component {
   render() {
     return (
+      <Provider store={store}>
       <div className="App">
+        <DevTools/>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
@@ -21,6 +28,7 @@ class App extends Component {
           </a>
         </header>
       </div>
+      </Provider>
     );
   }
 }
