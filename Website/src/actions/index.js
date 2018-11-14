@@ -6,6 +6,9 @@ import {
          LOGIN_SUCCESS,
          LOGIN_FAILURE,
          LOGOUT,
+         FETCH_UNIVERSITIES_SUCCESS,
+         FETCH_UNIVERSITIES_INIT,
+         FETCH_UNIVERSITIES_FAIL
          } from './types';
 
 const axiosInstance = axiosService.getInstance();
@@ -67,3 +70,34 @@ export const logout = () => {
   }
 }
 
+const fetchUniversitiesSuccess = (universities) => {
+  return {
+    type: FETCH_UNIVERSITIES_SUCCESS,
+    universities
+  }
+}
+
+const fetchUniversitiesInit = () => {
+  return {
+    type: FETCH_UNIVERSITIES_INIT
+  }
+}
+
+const fetchUniversitiesFail = (errors) => {
+  return {
+    type: FETCH_UNIVERSITIES_FAIL,
+    errors
+  }
+}
+
+export const fetchUniversities = () => {
+  const url = '/api/v1/universities';
+  return dispatch => {
+    dispatch(fetchUniversitiesInit());
+    console.log(fetchUniversities);
+    axios.get(url)
+    .then(res => res.data )
+    .then(universities => dispatch(fetchUniversitiesSuccess(universities)))
+    .catch(({response}) => dispatch(fetchUniversitiesFail(response.data.errors)))
+  }
+}

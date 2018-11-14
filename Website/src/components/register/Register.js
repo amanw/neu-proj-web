@@ -34,16 +34,20 @@ export class Register extends React.Component {
     return (
       <div id ="page-content-wrapper">
       <div className = "container-fluid">
+      <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page"><i className="fas fa-user-plus"/><span> Register </span></li>
+      </ol>
+      </nav>
       <section id='register'>
         <div className='bwm-form'>
           <div className='row'>
             <div className='col-md-5'>
-              <h1>Register</h1>
               <RegisterForm submitCb={this.registerUser} errors={errors} />
             </div>
             <div className='col-md-6 ml-auto'>
               <div className='image-container'>
-                <h2 className='catchphrase'>As our member you have access to most awesome places in the world.</h2>
+                <h2 className='catchphrase'>This is how you will create a new member to add the auditors.</h2>
                 <img src={process.env.PUBLIC_URL + '/img/register-image.jpg'} alt=""/>
               </div>
             </div>

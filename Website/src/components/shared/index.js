@@ -1,10 +1,18 @@
 import React, {Component} from 'react';
 
-export default class Index extends Component {
+
+class Index extends React.Component {
+
+    
     render() {
+        
         return (
-           <h1>Welcome to the Index Page.</h1>
+           <h1>Welcome to DashBoard</h1>
         )
     }
 
 }
+
+
+
+export default (Index)  

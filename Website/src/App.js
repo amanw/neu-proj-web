@@ -7,7 +7,9 @@ import DevTools from 'containers/devTools';
 import { ToastContainer } from 'react-toastify';
 import Login from 'components/login/Login';
 import Header from 'components/shared/Header';
+import Footer from 'components/shared/Footer';
 import Index from 'components/shared/index';
+import University from 'components/university/UniversityList';
 import { Register } from 'components/register/Register';
 import SideBar from 'components/shared/SideBar';
 
@@ -49,10 +51,12 @@ class App extends Component {
               <Route exact path='/' render={() =>  <Redirect to='/login' /> }/>
               <Route exact path='/login' component={Login} />
               <ProtectedRoute exact path='/index' component={Index} />
+              <ProtectedRoute exact path='/university' component={University} />
               <ProtectedRoute exact path='/register' component={Register} />
             </Switch>
           </main>
           </div>
+           <Footer/>
           </div>
         </div>
         </BrowserRouter>

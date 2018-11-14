@@ -1,9 +1,11 @@
 @import 'variables.scss';
 @import 'header/header.scss';
+@import 'footer/footer.scss';
 @import 'form/form.scss';
 @import 'menu/normalize.scss';
 @import 'menu/menu.scss';
 @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+
 label {
   font-size: 14px;
 }
