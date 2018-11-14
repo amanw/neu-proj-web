@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const auditPlanSchema = new Schema({
+const universityDataSchema = new Schema({
   University: { type: String, required: true, max: [128, 'Too long, max is 128 characters']},
   UniversityArea: { type: String, required: true, lowercase: false },
   Owner: { type: String, required: true, min: [4, 'Too short, min is 4 characters']},
@@ -10,4 +10,4 @@ const auditPlanSchema = new Schema({
 });
 
 
-module.exports = mongoose.model('AuditPlan', auditPlanSchema );
+module.exports = mongoose.model('Universitydata', universityDataSchema );

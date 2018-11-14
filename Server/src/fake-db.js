@@ -1,7 +1,7 @@
 const User = require('./models/user');
-const AuditPlan = require('./models/auditplan');
-const auditDbData = require('./auditplan.json');
-
+const UniversityData = require('./models/universitydata');
+const universityDbData = require('./universitydata.json');
+//let universities = null;
 class FakeDb {
 
   constructor() {
@@ -14,14 +14,32 @@ class FakeDb {
       "email": "test1@gmail.com",
       "password": "testtest1"
       }
-    ]
+    ];
     //fakeDbData.users;
-    this.auditplans = auditDbData.auditplans;
+     this.universities = universityDbData.universities;
+    // this.universities = [
+    //   {
+    //     "University": "Northeastern",
+    //     "UniversityArea": "Academic",
+    //     "Owner": "Bouve",
+    //     "AuditArea": "Bouve College Health Sciences",
+    //     "Description": "",
+    //     "": ""
+    //     },
+    //     {
+    //     "University": "Northeastern",
+    //     "UniversityArea": "Academic",
+    //     "Owner": "Bouve",
+    //     "AuditArea": "Center for Drug Discovery",
+    //     "Description": "",
+    //     "": ""
+    //     }
+    // ];
   }
 
   async cleanDb() {
     await User.remove({});
-    await AuditPlan.remove({});
+    await UniversityData.remove({});
   }
 
   pushDataToDb() {
@@ -30,13 +48,10 @@ class FakeDb {
       newUser.save();
     });
 
-    this.auditplans.forEach(auditplan => {
-      const newPlan = new AuditPlan(auditplan);
-      newPlan.save();
-    })
-  
-
-    
+    this.universities.forEach(universityData => {
+      const newData = new UniversityData(universityData);
+      newData.save();
+    });
   }
 
   async seedDb() {
