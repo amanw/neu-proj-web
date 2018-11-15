@@ -1,10 +1,11 @@
 import React from 'react';
-import UniversityAddForm from './UniversityAddForm';
+import UniversityEditForm from './UniversityEditForm';
 import { Redirect } from 'react-router-dom';
 import * as actions from 'actions';
 import { connect } from 'react-redux';
 
- class UniversityAdd extends React.Component {
+
+ class UniversityEdit extends React.Component {
 
   constructor() {
     super();
@@ -13,15 +14,14 @@ import { connect } from 'react-redux';
 
   }
   componentWillMount() {
+    
+    const universityId = this.props.match.params.id;
+    this.props.dispatch(actions.fetchUniversitiesById(universityId));
     this.props.dispatch(actions.fetchUniversities());
   }
+ 
 
   universityAdd(universityData) {
-    alert('test');
-    // actions.universityAdd(universityData).then(
-    //   universityAdded => this.props.universities.setState({redirect: true}),
-    //   errors => this.props.universities.setState({errors})
-    // );
     this.props.dispatch(actions.universityAdd(universityData));
   }
 
@@ -43,9 +43,10 @@ import { connect } from 'react-redux';
           <div className='row'>
             <div className='col-md-5'>
             {/* <h1 className='page-title'>Create University Data</h1> */}
-            <UniversityAddForm submitCb={this.universityAdd}
+            <UniversityEditForm submitCb={this.universityAdd}
                                 options={this.props.universities.universityAreas}
                                 options1 ={this.props.universities.universityOwners}
+                                options2 ={this.props.university}
                                 errors={this.props.universities.errors}/>
               
             </div>
@@ -65,9 +66,10 @@ import { connect } from 'react-redux';
 }
 function mapStateToProps(state) {
   return {
-    universities: state.universities
+    universities: state.universities,
+    university: state.universityData.data
   }
 }
+export default connect(mapStateToProps)(UniversityEdit)  
 
-export default connect(mapStateToProps)(UniversityAdd)  
 

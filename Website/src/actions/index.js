@@ -8,7 +8,12 @@ import {
          LOGOUT,
          FETCH_UNIVERSITIES_SUCCESS,
          FETCH_UNIVERSITIES_INIT,
-         FETCH_UNIVERSITIES_FAIL
+         FETCH_UNIVERSITIES_FAIL,
+         FETCH_UNIVERSITIESBYID_INIT,
+         FETCH_UNIVERSITIESBYID_SUCCESS,
+         FETCH_UNIVERSITIESBYID_FAIL,
+         UNIVERSITIES_ADD_SUCCESS,
+         UNIVERSITIES_ADD_FAIL
          } from './types';
 
 const axiosInstance = axiosService.getInstance();
@@ -25,7 +30,6 @@ const loginSuccess = () => {
 }
 
 const loginFailure = (errors) => {
-  debugger;
   return {
     type: LOGIN_FAILURE,
     errors
@@ -71,9 +75,14 @@ export const logout = () => {
 }
 
 const fetchUniversitiesSuccess = (universities) => {
+
+  const universityAreas = [...new Set(universities.map(item => item.UniversityArea))]//universities.map(item=>item.UniversityArea);
+  const universityOwners = [...new Set(universities.map(item => item.Owner))];
   return {
     type: FETCH_UNIVERSITIES_SUCCESS,
-    universities
+    universities,
+    universityAreas,
+    universityOwners
   }
 }
 
@@ -94,10 +103,68 @@ export const fetchUniversities = () => {
   const url = '/api/v1/universities';
   return dispatch => {
     dispatch(fetchUniversitiesInit());
-    console.log(fetchUniversities);
     axios.get(url)
     .then(res => res.data )
     .then(universities => dispatch(fetchUniversitiesSuccess(universities)))
     .catch(({response}) => dispatch(fetchUniversitiesFail(response.data.errors)))
   }
 }
+
+const universityAddSuccess = () => {
+  return {
+    type: UNIVERSITIES_ADD_SUCCESS
+  }
+}
+
+const universityAddFail = (errors) => {
+  return {
+    type: UNIVERSITIES_ADD_FAIL,
+    errors
+  }
+}
+
+
+export const universityAdd = (universityData) => {
+  return dispatch => {
+  return axios.post('/api/v1/universities/create', universityData).then(
+    res => res.data).then(dispatch(universityAddSuccess())).catch(({response}) => {
+     //Promise.reject(response.data.errors)
+      dispatch(universityAddFail(response.data.errors));
+    })
+  }
+}
+
+const fetchUniversitiesByIdInit = () => {
+  return {
+    type:FETCH_UNIVERSITIESBYID_INIT
+  }
+}
+
+const fetchUniversitiesByIdSucces = (universityData) => {
+  return {
+    type:FETCH_UNIVERSITIESBYID_SUCCESS,
+    universityData
+  }
+}
+
+const fetchUniversitiesByIdFail = (errors) => {
+  return {
+    type:FETCH_UNIVERSITIESBYID_FAIL,
+    errors
+  }
+}
+
+export const fetchUniversitiesById = (universityId) => {
+  const url = `/api/v1/universities/${universityId}`;
+  return dispatch => {
+    dispatch(fetchUniversitiesByIdInit());
+    axios.get(url)
+    .then(res => res.data )
+    .then(universityData => dispatch(fetchUniversitiesByIdSucces(universityData)))
+    .catch(({response}) => dispatch(fetchUniversitiesByIdFail(response.data.errors)))
+  }
+}
+
+
+
+

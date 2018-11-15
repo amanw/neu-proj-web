@@ -6,27 +6,19 @@ import { BwmTextArea } from 'components/shared/form/BwmTextArea';
 import { BwmResError } from 'components/shared/form/BwmResError';
 import { required } from 'components/shared/form/validators';
 
-const UniversityAddForm = props => {
-  const { handleSubmit, pristine, submitting, submitCb, valid, options,options1, errors } = props
+const UniversityEditForm = props => {
+  const { handleSubmit, pristine, submitting, submitCb, valid, options,options1,options2, errors } = props
+  //props.initialize({UniversityArea:'test'})
+  debugger;
   return (
     <form onSubmit={handleSubmit(submitCb)}>
-    {/* <Field
-        name="University"
-        type="text"
-        label='University'
-        className='form-control form-control-lg'
-        component={BwmInput}
-        validate={[required]}
-        input = {{disabled:true}}
-        placeholder = "Northeastern University"
-        value= "test"
-      /> */}
        <Field
        options = {options}
         name="UniversityArea"
         type="text"
         label='University Area'
         className='form-control form-control-lg'
+        // value = {options2.UniversityArea}
         component={BwmSelect}
         validate={[required]}
       />
@@ -36,6 +28,7 @@ const UniversityAddForm = props => {
         type="text"
         label='Owner'
         className='form-control form-control-lg'
+        //value = {props.university.Owner}
         component={BwmSelect}
         validate={[required]}
       />
@@ -44,6 +37,7 @@ const UniversityAddForm = props => {
         type="text"
         label='Audit Area'
         className='form-control form-control-lg'
+        // value = {options2.AuditArea}
         component={BwmInput}
         validate={[required]}
       />
@@ -53,12 +47,13 @@ const UniversityAddForm = props => {
         label='Description'
         rows = '6'
         className='form-control form-control-lg'
+        //value = {props.university.Description}
         component={BwmTextArea}
         validate={[required]}
       />
     
       <button className='btn btn-bwm btn-form' type="submit" disabled={!valid || pristine || submitting}>
-        Create Unversity Data
+        Edit Unversity Data
       </button>
       <BwmResError errors={errors} />
     </form>
@@ -66,5 +61,5 @@ const UniversityAddForm = props => {
 }
 
 export default reduxForm({
-  form: 'universityAddForm',
-})(UniversityAddForm)
+  form: 'universityEditForm',
+})(UniversityEditForm)

@@ -10,6 +10,8 @@ import Header from 'components/shared/Header';
 import Footer from 'components/shared/Footer';
 import Index from 'components/shared/index';
 import University from 'components/university/UniversityList';
+import UniversityAdd from 'components/university/UniversityAdd'
+import UniversityEdit from 'components/university/UniversityEdit'
 import { Register } from 'components/register/Register';
 import SideBar from 'components/shared/SideBar';
 
@@ -41,17 +43,19 @@ class App extends Component {
         <BrowserRouter>
         <div className='App'>
           <DevTools/>
-          <ToastContainer />
           <div id = "outer-container">
           <SideBar/>
           <Header logout={this.logout}/>
           <div className='container-fluid'>
+          <ToastContainer />
           <main id = "page-wrap">
             <Switch>
               <Route exact path='/' render={() =>  <Redirect to='/login' /> }/>
               <Route exact path='/login' component={Login} />
               <ProtectedRoute exact path='/index' component={Index} />
               <ProtectedRoute exact path='/university' component={University} />
+              <ProtectedRoute exact path='/university/new' component={UniversityAdd} />
+              <ProtectedRoute exact path='/university/:id' component={UniversityEdit} />
               <ProtectedRoute exact path='/register' component={Register} />
             </Switch>
           </main>
