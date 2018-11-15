@@ -10,8 +10,8 @@ router.get('/secret', UserCtrl.authMiddleware, function(req, res) {
     res.json({"secret": true});
   });
 
-  router.post('', UserCtrl.authMiddleware, function(req, res) {
-    const { University, UniversityArea, Owner, AuditArea, Description } = req.body;
+  router.post('/create', function(req, res) {
+    const { University = "Northeastern", UniversityArea, Owner, AuditArea, Description } = req.body;
   
     const universitydata = new UniversityData({University, UniversityArea, Owner, AuditArea, Description});
 
@@ -40,5 +40,19 @@ router.get('', function(req, res) {
         res.json(foundUniversityData);
     })
 });
+
+router.get('/:id', function(req, res) {
+    const universityId = req.params.id;
+  
+    UniversityData.findById(universityId)
+          .exec(function(err, foundUniversity) {
+  
+      if (err) {
+        return res.status(422).send({errors: [{title: 'University Data Error!', detail: 'Could not find this Data!'}]});
+      }
+  
+      return res.json(foundUniversity);
+    });
+  });
 
 module.exports = router;
