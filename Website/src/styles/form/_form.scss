@@ -123,6 +123,9 @@
 
 .addbutton {
   float:left;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin-right: 2px;  
 }
 
 .btn-default {
@@ -138,4 +141,11 @@
 
 .react-bs-table-sizePerPage-dropdown {
   float: left;
+}
+
+.delbutton {
+  float:left;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin-right: 2px;
 }

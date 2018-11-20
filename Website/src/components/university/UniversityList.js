@@ -2,11 +2,19 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import * as actions from 'actions';
+
+import { confirmAlert } from 'react-confirm-alert'; // Import
+import 'react-confirm-alert/src/react-confirm-alert.css' // Import css
+import { ToastContainer, toast } from 'react-toastify';
+
 class UniversityList extends React.Component {
 
     constructor() {
         super()
         this.routeChange = this.routeChange.bind(this);
+        this.state = {
+            isDeleted : false 
+        }
 
        
     }
@@ -24,9 +32,38 @@ class UniversityList extends React.Component {
        this.props.history.push(path);
     }
     
+    deleteFromList(row) {
+        confirmAlert({
+            title: 'Confirm to submit',
+            message: 'Are you sure to do this.',
+            buttons: [
+              {
+                label: 'Yes',
+                onClick: () => {
+                this.props.dispatch(actions.universityDelete(row._id)) 
+                this.setState({
+                    isDeleted:true
+                })
+            }              
+              },
+              {
+                label: 'No',
+                onClick: () =>{ //alert('Click No')
+                this.setState({
+                    isDeleted:false
+                })
+            }
+              }
+            ]
+          })
+
+
+      }
+    
 
     cellButton(cell, row, enumObject, rowIndex) {
         return (
+            <div className = "gridButtons">
             <button 
                 type="button"
                 className="btn btn-info react-bs-table-add-btn addbutton" 
@@ -35,12 +72,34 @@ class UniversityList extends React.Component {
             >
             <span><i className="fa glyphicon glyphicon-pencil fa-pencil"></i> Edit</span>
             </button>
+            <button 
+            type="button"
+            className="btn btn-danger react-bs-table-del-btn delbutton" 
+            onClick={() => 
+            this.deleteFromList(row)}
+        >
+        <span><i className="fa glyphicon glyphicon-trash fa-trash"></i> Delete</span>
+        </button>
+        </div>
         )
         }
 
+    deleteButton(cell, row, enumObject, rowIndex) {
+        return (
+            <button 
+                type="button"
+                className="btn btn-warning react-bs-table-del-btn" 
+                onClick={() => 
+                this.handleDelete(row)}
+            >
+            <span><i className="fa glyphicon glyphicon-trash fa-trash"></i> Delete</span>
+            </button>  
+        )
+    }
+
 
     render() {
-        
+        const {isDeleted } = this.state;
         return (
             <div>
             <nav aria-label="breadcrumb">
@@ -49,6 +108,14 @@ class UniversityList extends React.Component {
             </ol>
             </nav>
             <div className="col-md-12">
+            { isDeleted &&
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong>Deleted!</strong> You have successfully Deleted the data.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        }
             <button type="button" className="btn btn-info react-bs-table-add-btn addbutton" onClick = {this.routeChange}><span><i className="fa glyphicon glyphicon-plus fa-plus"></i> New</span></button>
             
             <BootstrapTable data={this.props.universities.data} striped={true} hover={true} pagination={true} search={ true } multiColumnSearch={ true } exportCSV={true}>
@@ -60,6 +127,7 @@ class UniversityList extends React.Component {
             <TableHeaderColumn dataField='Description' tdStyle={ { whiteSpace: 'normal' } } searchable={ false }>Description</TableHeaderColumn>
             <TableHeaderColumn dataField="button" dataFormat={this.cellButton.bind(this)}>Buttons</TableHeaderColumn>
             </BootstrapTable>
+            
             </div>
             </div>
         )

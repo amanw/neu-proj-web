@@ -4,29 +4,28 @@ import { Redirect } from 'react-router-dom';
 import * as actions from 'actions';
 import { connect } from 'react-redux';
 
-
  class UniversityEdit extends React.Component {
 
   constructor() {
     super();
 
-    this.universityAdd = this.universityAdd.bind(this);
+    this.universityEdit = this.universityEdit.bind(this);
 
   }
   componentWillMount() {
     
     const universityId = this.props.match.params.id;
     this.props.dispatch(actions.fetchUniversitiesById(universityId));
-    this.props.dispatch(actions.fetchUniversities());
+   
   }
- 
 
-  universityAdd(universityData) {
-    this.props.dispatch(actions.universityAdd(universityData));
+  universityEdit(universityData) {
+    const {university: {_id}, dispatch } = this.props;
+    dispatch(actions.universityUpdate(_id,universityData));
   }
 
   render() {
-    if (this.props.universities.redirectAdd) {
+    if (this.props.universities.redirectEdit) {
         return <Redirect to={{pathname:'/university'}}/>
       }
 
@@ -35,7 +34,7 @@ import { connect } from 'react-redux';
       <div className = "container-fluid">
       <nav aria-label="breadcrumb">
       <ol className="breadcrumb">
-        <li className="breadcrumb-item active" aria-current="page"><i className="fas fa-user-plus"/><span> Register </span></li>
+        <li className="breadcrumb-item active" aria-current="page"><i className="far fa-edit"/><span> Edit University Data </span></li>
       </ol>
       </nav>
       <section id='register'>
@@ -43,16 +42,16 @@ import { connect } from 'react-redux';
           <div className='row'>
             <div className='col-md-5'>
             {/* <h1 className='page-title'>Create University Data</h1> */}
-            <UniversityEditForm submitCb={this.universityAdd}
+            <UniversityEditForm submitCb={this.universityEdit}
                                 options={this.props.universities.universityAreas}
                                 options1 ={this.props.universities.universityOwners}
                                 options2 ={this.props.university}
-                                errors={this.props.universities.errors}/>
+                                errors={this.props.universities.errors}  />
               
             </div>
             <div className='col-md-6 ml-auto'>
               <div className='image-container'>
-                <h2 className='catchphrase'>This is how you will create a new Unversity to add to the Audit Plan.</h2>
+                <h2 className='catchphrase'>This is how you will create a new Unversity to Edit to the Audit Plan.</h2>
                 <img src={process.env.PUBLIC_URL + '/img/register-image.jpg'} alt=""/>
               </div>
             </div>
@@ -70,6 +69,8 @@ function mapStateToProps(state) {
     university: state.universityData.data
   }
 }
-export default connect(mapStateToProps)(UniversityEdit)  
+
+export default connect(mapStateToProps)(UniversityEdit)
+
 
 

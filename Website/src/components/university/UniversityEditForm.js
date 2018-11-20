@@ -5,11 +5,11 @@ import { BwmSelect } from 'components/shared/form/BwmSelect';
 import { BwmTextArea } from 'components/shared/form/BwmTextArea';
 import { BwmResError } from 'components/shared/form/BwmResError';
 import { required } from 'components/shared/form/validators';
+import { connect } from 'react-redux';
 
-const UniversityEditForm = props => {
+let UniversityEditForm = props => {
   const { handleSubmit, pristine, submitting, submitCb, valid, options,options1,options2, errors } = props
-  //props.initialize({UniversityArea:'test'})
-  debugger;
+  
   return (
     <form onSubmit={handleSubmit(submitCb)}>
        <Field
@@ -59,7 +59,37 @@ const UniversityEditForm = props => {
     </form>
   )
 }
+//defining the redux form
+UniversityEditForm = reduxForm({
 
-export default reduxForm({
   form: 'universityEditForm',
+
+  enableReinitialize: true
+
 })(UniversityEditForm)
+
+//connecting to initial values
+UniversityEditForm = connect(
+
+  state => ({
+
+    initialValues: state.universityData.data // pull initial values
+
+  })
+)(UniversityEditForm)
+
+export default UniversityEditForm;
+
+
+// export default reduxForm({
+//   form: 'universityEditForm',
+//   keepDirtyOnReinitialize: true,
+//   enableReinitialize: true,
+//   updateUnregisteredFields: true,
+//   initialValues: {
+//     "UniversityArea": "test",
+//     "Owner": "ttttt",
+//     "AuditArea": "LOL",
+//     "Description":"test"
+//   }
+// })(UniversityEditForm)

@@ -13,7 +13,11 @@ import {
          FETCH_UNIVERSITIESBYID_SUCCESS,
          FETCH_UNIVERSITIESBYID_FAIL,
          UNIVERSITIES_ADD_SUCCESS,
-         UNIVERSITIES_ADD_FAIL
+         UNIVERSITIES_ADD_FAIL,
+         UNIVERSITIES_UPDATE_SUCCESS,
+         UNIVERSITIES_UPDATE_FAIL,
+         UNIVERSITIES_DELETE_FAIL,
+         UNIVERSITIES_DELETE_SUCCESS
          } from './types';
 
 const axiosInstance = axiosService.getInstance();
@@ -73,7 +77,7 @@ export const logout = () => {
     type: LOGOUT
   }
 }
-
+// Universities Actions
 const fetchUniversitiesSuccess = (universities) => {
 
   const universityAreas = [...new Set(universities.map(item => item.UniversityArea))]//universities.map(item=>item.UniversityArea);
@@ -164,6 +168,59 @@ export const fetchUniversitiesById = (universityId) => {
     .catch(({response}) => dispatch(fetchUniversitiesByIdFail(response.data.errors)))
   }
 }
+
+const universityUpdateSucces = (updatedUniversity) => {
+  return {
+    type: UNIVERSITIES_UPDATE_SUCCESS,
+    updatedUniversity
+  }
+}
+
+const universityUpdateFail = (errors) => {
+  return {
+    type: UNIVERSITIES_UPDATE_FAIL,
+    errors
+  }
+}
+
+export const universityUpdate = (id,updatedUniversity) => dispatch => {
+  return axiosInstance.patch(`/universities/${id}`, updatedUniversity)
+    .then(res=>res.data)
+    .then(updatedUniversity => {
+      dispatch(universityUpdateSucces(updatedUniversity));})
+    .catch(({response}) => dispatch(universityUpdateFail(response.data.errors)))
+}
+
+const universityDeleteSuccess = (universityId) => {
+  //alert()
+  debugger;
+  return {
+    type: UNIVERSITIES_DELETE_SUCCESS,
+    universityId
+  } 
+}
+
+const universityDeleteFail = (errors) => {
+  return {
+    type: UNIVERSITIES_DELETE_FAIL,
+    errors
+  }
+}
+
+export const universityDelete = (universityId) => {
+  return  dispatch => {
+  axiosInstance.delete(`/universities/${universityId}`)
+  .then(res => res.data)
+  .then(universities => {
+    dispatch(universityDeleteSuccess(universityId));})
+    .catch(({response}) => dispatch(universityDeleteFail(response.data.errors)))
+
+}
+}
+
+
+
+
 
 
 

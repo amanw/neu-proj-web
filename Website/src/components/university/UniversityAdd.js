@@ -17,11 +17,7 @@ import { connect } from 'react-redux';
   }
 
   universityAdd(universityData) {
-    alert('test');
-    // actions.universityAdd(universityData).then(
-    //   universityAdded => this.props.universities.setState({redirect: true}),
-    //   errors => this.props.universities.setState({errors})
-    // );
+    
     this.props.dispatch(actions.universityAdd(universityData));
   }
 
@@ -35,7 +31,7 @@ import { connect } from 'react-redux';
       <div className = "container-fluid">
       <nav aria-label="breadcrumb">
       <ol className="breadcrumb">
-        <li className="breadcrumb-item active" aria-current="page"><i className="fas fa-user-plus"/><span> Register </span></li>
+        <li className="breadcrumb-item active" aria-current="page"><i className="fas fa-plus"/><span> University Add Data </span></li>
       </ol>
       </nav>
       <section id='register'>

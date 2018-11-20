@@ -158,7 +158,10 @@
   text-align: center; }
 
 .addbutton {
-  float: left; }
+  float: left;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin-right: 2px; }
 
 .btn-default {
   color: #333;
@@ -171,6 +174,12 @@
 
 .react-bs-table-sizePerPage-dropdown {
   float: left; }
+
+.delbutton {
+  float: left;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin-right: 2px; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block; }
