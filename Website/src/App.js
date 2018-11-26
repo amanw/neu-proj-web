@@ -12,6 +12,7 @@ import Index from 'components/shared/index';
 import University from 'components/university/UniversityList';
 import UniversityAdd from 'components/university/UniversityAdd'
 import UniversityEdit from 'components/university/UniversityEdit'
+import AuditPlan from 'components/auditplan/Auditplan'
 import { Register } from 'components/register/Register';
 import SideBar from 'components/shared/SideBar';
 
@@ -56,6 +57,7 @@ class App extends Component {
               <ProtectedRoute exact path='/university' component={University} />
               <ProtectedRoute exact path='/university/new' component={UniversityAdd} />
               <ProtectedRoute exact path='/university/:id' component={UniversityEdit} />
+              <ProtectedRoute exact path='/auditplan/new/:id' component={AuditPlan} />
               <ProtectedRoute exact path='/register' component={Register} />
             </Switch>
           </main>

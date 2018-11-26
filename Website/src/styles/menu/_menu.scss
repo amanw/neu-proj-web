@@ -17,6 +17,7 @@ main {
   height: 100%;
   text-align: center;
   overflow: auto;
+  min-height: 700px;
 }
 h1 {
   font-weight: 800;
@@ -296,6 +297,6 @@ h1 {
   color: #b8b7ad;
 }
 
-.react-bs-table-container {
-  max-height: 450px;
-}
+// .react-bs-table-container {
+//   max-height: 450px;
+// }

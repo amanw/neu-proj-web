@@ -55,4 +55,77 @@ router.get('/:id', function(req, res) {
     });
   });
 
+
+  router.patch('/:id', function(req, res) {
+
+    const universityData = req.body;
+  
+    UniversityData
+      .findById(req.params.id)
+      .exec(function(err, foundUniversity) {
+  
+        if (err) {
+          return res.status(422).send({errors: normalizeErrors(err.errors)});
+        }
+
+        foundUniversity.set(universityData);
+        foundUniversity.save(function(err) {
+          if (err) {
+            return res.status(422).send({errors: normalizeErrors(err.errors)});
+          }
+  
+          return res.status(200).send(foundUniversity);
+        });
+      });
+  });
+
+  router.patch('/:id', function(req, res) {
+
+    const universityData = req.body;
+  
+    UniversityData
+      .findById(req.params.id)
+      .exec(function(err, foundUniversity) {
+  
+        if (err) {
+          return res.status(422).send({errors: normalizeErrors(err.errors)});
+        }
+
+        foundUniversity.set(universityData);
+        foundUniversity.save(function(err) {
+          if (err) {
+            return res.status(422).send({errors: normalizeErrors(err.errors)});
+          }
+  
+          return res.status(200).send(foundUniversity);
+        });
+      });
+  });
+
+  router.delete('/:id', function(req, res) {
+
+    UniversityData
+      .findById(req.params.id)
+      .exec(function(err, foundUniversity) {
+  
+        if (err) {
+          return res.status(422).send({errors: normalizeErrors(err.errors)});
+        }
+        foundUniversity.remove(function(err) {
+          if (err) {
+            return res.status(422).send({errors: normalizeErrors(err.errors)});
+          }
+  
+          return res.json({'status': 'deleted',
+                            'ID': req.params.id
+                          
+                          }
+
+          );
+        });
+      });
+  });
+
+
+
 module.exports = router;

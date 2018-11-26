@@ -333,7 +333,8 @@ a:focus {
 main {
   height: 100%;
   text-align: center;
-  overflow: auto; }
+  overflow: auto;
+  min-height: 700px; }
 
 h1 {
   font-weight: 800;
@@ -609,9 +610,6 @@ h1 {
   box-shadow: inset 0 -1px rgba(0, 0, 0, 0);
   color: #b8b7ad; }
 
-.react-bs-table-container {
-  max-height: 450px; }
-
 label {
   font-size: 14px; }
 
@@ -646,3 +644,6 @@ label {
   .btn-bwm:hover, .btn-bwm:focus, .btn-bwm:active {
     border-color: #c00 !important;
     background-color: #c00 !important; }
+
+.default-table {
+  background: #f7f7f7; }

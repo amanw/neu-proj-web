@@ -17,7 +17,9 @@ import {
          UNIVERSITIES_UPDATE_SUCCESS,
          UNIVERSITIES_UPDATE_FAIL,
          UNIVERSITIES_DELETE_FAIL,
-         UNIVERSITIES_DELETE_SUCCESS
+         UNIVERSITIES_DELETE_SUCCESS,
+         AUDITPLAN_ADD_SUCCESS,
+         AUDITPLAN_ADD_FAIL
          } from './types';
 
 const axiosInstance = axiosService.getInstance();
@@ -216,6 +218,33 @@ export const universityDelete = (universityId) => {
     .catch(({response}) => dispatch(universityDeleteFail(response.data.errors)))
 
 }
+}
+
+// Audit Planning Actions
+const auditAddSuccess = (auditPlan) => {
+  return {
+    type: AUDITPLAN_ADD_SUCCESS,
+    auditPlan
+
+  }
+}
+
+const auditAddFail = (errors) =>{
+  return {
+   type:AUDITPLAN_ADD_FAIL,
+   errors
+  }
+}
+
+export const auditAdd = (auditData) => {
+  return dispatch => {
+  return axios.post('/api/v1/auditplans/create',auditData)
+  .then(res => res.data)
+  .then(dispatch(auditAddSuccess(auditData)))
+  .catch(({response}) => {
+    dispatch(auditAddFail(response.data.errors));
+  })
+  }
 }
 
 

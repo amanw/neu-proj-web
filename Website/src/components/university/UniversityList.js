@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import * as actions from 'actions';
-
+import { Redirect } from 'react-router-dom';
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css' // Import css
 import { ToastContainer, toast } from 'react-toastify';
@@ -59,6 +59,12 @@ class UniversityList extends React.Component {
 
 
       }
+
+      handleauditPlan(row){
+        debugger;
+        let path = `/auditplan/new/${row._id}`;
+        this.props.history.push(path);
+      }
     
 
     cellButton(cell, row, enumObject, rowIndex) {
@@ -76,10 +82,16 @@ class UniversityList extends React.Component {
             type="button"
             className="btn btn-danger react-bs-table-del-btn delbutton" 
             onClick={() => 
-            this.deleteFromList(row)}
-        >
-        <span><i className="fa glyphicon glyphicon-trash fa-trash"></i> Delete</span>
-        </button>
+            this.deleteFromList(row)}>
+            <span><i className="fa glyphicon glyphicon-trash fa-trash"></i> Delete</span>
+         </button>
+         <button 
+            type="button"
+            className="btn btn-info react-bs-table-info-btn delbutton" 
+            onClick={() => 
+            this.handleauditPlan(row)}>
+            <span><i className="fa glyphicon glyphicon-tasks fa-tasks"></i> Audit Plan</span>
+         </button>
         </div>
         )
         }

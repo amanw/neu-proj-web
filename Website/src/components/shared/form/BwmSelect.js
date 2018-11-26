@@ -5,7 +5,8 @@ export const BwmSelect = ({
   label,
   options,
   className,
-  meta: { touched, error, warning }
+  meta: { touched, error, warning },
+  children
 }) => {
 
   function renderOptions() {

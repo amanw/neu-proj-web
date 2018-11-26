@@ -79,17 +79,3 @@ UniversityEditForm = connect(
 )(UniversityEditForm)
 
 export default UniversityEditForm;
-
-
-// export default reduxForm({
-//   form: 'universityEditForm',
-//   keepDirtyOnReinitialize: true,
-//   enableReinitialize: true,
-//   updateUnregisteredFields: true,
-//   initialValues: {
-//     "UniversityArea": "test",
-//     "Owner": "ttttt",
-//     "AuditArea": "LOL",
-//     "Description":"test"
-//   }
-// })(UniversityEditForm)
