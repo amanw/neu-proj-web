@@ -46,6 +46,8 @@ router.get('/:id', function(req, res) {
   
     UniversityData.findById(universityId)
           .exec(function(err, foundUniversity) {
+
+            console.log(foundUniversity);
   
       if (err) {
         return res.status(422).send({errors: [{title: 'University Data Error!', detail: 'Could not find this Data!'}]});
