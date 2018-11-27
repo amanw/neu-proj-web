@@ -19,7 +19,16 @@ import {
          UNIVERSITIES_DELETE_FAIL,
          UNIVERSITIES_DELETE_SUCCESS,
          AUDITPLAN_ADD_SUCCESS,
-         AUDITPLAN_ADD_FAIL
+         AUDITPLAN_ADD_FAIL,
+         FETCH_AUDITPLANS_INIT,
+         FETCH_AUDITPLANS_SUCCESS,
+         FETCH_AUDITPLANS_FAIL,
+         FETCH_AUDITPLANBYID_INIT,
+         FETCH_AUDITPLANBYID_SUCCESS,
+         FETCH_AUDITPLANBYID_FAIL,
+         FETCH_AUDITPLANNEDSTATUS_INIT,
+         FETCH_AUDITPLANNEDSTATUS_SUCCESS,
+         FETCH_AUDITPLANNEDSTATUS_FAIL
          } from './types';
 
 const axiosInstance = axiosService.getInstance();
@@ -247,6 +256,69 @@ export const auditAdd = (auditData) => {
   }
 }
 
+const fetchAuditPlansSuccess = (auditplans) => {
+
+  return {
+    type: FETCH_AUDITPLANS_SUCCESS,
+    auditplans,
+  }
+}
+
+const fetchAuditPlansInit = () => {
+  return {
+    type: FETCH_AUDITPLANS_INIT
+  }
+}
+
+const fetchAuditPlansFail = (errors) => {
+  return {
+    type: FETCH_AUDITPLANS_FAIL,
+    errors
+  }
+}
+
+export const fetchAuditPlans = () => {
+  const url = '/api/v1/auditplans';
+  return dispatch => {
+    dispatch(fetchAuditPlansInit());
+    axios.get(url)
+    .then(res => res.data )
+    .then(auditplans => dispatch(fetchAuditPlansSuccess(auditplans)))
+    .catch(({response}) => dispatch(fetchAuditPlansFail(response.data.errors)))
+  }
+}
+
+const fetchAuditPlannedStatusSuccess = (auditPlannedStatus) => {
+
+  return {
+    type: FETCH_AUDITPLANNEDSTATUS_SUCCESS,
+    auditPlannedStatus,
+  }
+}
+
+const fetchAuditPlannedStatusInit = () => {
+  return {
+    type: FETCH_AUDITPLANNEDSTATUS_INIT
+  }
+}
+
+const fetchAuditPlannedStatusFail = (errors) => {
+  return {
+    type: FETCH_AUDITPLANNEDSTATUS_FAIL,
+    errors
+  }
+}
+
+export const fetchAuditPlannedStatus = (status) => {
+  const url = `/api/v1/auditplans/getStatus${status}`;
+  return dispatch => {
+    dispatch(fetchAuditPlannedStatusInit());
+    axios.get(url)
+    .then(res => res.data )
+    .then(auditplans => dispatch(fetchAuditPlannedStatusSuccess(auditplans)))
+    .catch(({response}) => dispatch(fetchAuditPlannedStatusFail(response.data.errors)))
+  }
+}
 
 
 

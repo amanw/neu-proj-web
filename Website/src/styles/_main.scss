@@ -55,6 +55,9 @@ label {
 .default-table {
   background: #f7f7f7;
 }
+.page-item.active .page-link {
+  z-index: 0 !important;
+}
 
 
 

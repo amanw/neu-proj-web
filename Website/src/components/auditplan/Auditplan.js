@@ -46,6 +46,7 @@ const re = RegExp('^(?:[0-9]|0[1-9])$');
       RiskLevel: auditData.RiskLevel,
       DaysRequired: auditData.DaysRequired,
       ElapsedMonths: auditData.ElapsedMonths,
+      status:"planned",
       unversitydata_id: this.props.match.params.id
     }
     this.props.dispatch(actions.auditAdd(data));
