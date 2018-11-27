@@ -10,9 +10,9 @@ var async = require("async");
 
 router.post('/create', function(req, res,next) {
     var ObjectID = mongoose.mongo.ObjectId;
-    const { LastAuditDate, NextAuditDate, RiskFactor, RiskLevel, DaysRequired, ElapsedMonths, unversitydata_id } = req.body;
+    const { LastAuditDate, NextAuditDate, RiskFactor, RiskLevel, DaysRequired, ElapsedMonths,status, unversitydata_id } = req.body;
     
-    const auditplan = new AuditPlan({LastAuditDate, NextAuditDate, RiskFactor, RiskLevel, DaysRequired, ElapsedMonths, unversitydata_id});
+    const auditplan = new AuditPlan({LastAuditDate, NextAuditDate, RiskFactor, RiskLevel, DaysRequired, ElapsedMonths,status, unversitydata_id});
     
     var save_status = false;
 
@@ -42,7 +42,54 @@ router.post('/create', function(req, res,next) {
             return res.status(422).send({errors: normalizeErrors(err.errors)});
         });
             
-        });
+});
+
+router.get('', function(req, res) {
+    AuditPlan.find({}, function(err, foundAuditPlans) {
+
+        if (err) {
+            return res.status(422).send({errors: normalizeErrors(err.errors)});
+          }
+        
+        if (foundAuditPlans.length === 0) {
+            return res.status(422).send({errors: [{title: 'No Audit Plan Data Found!', detail: 'There are no Audit Plans for the required approach '}]});
+        }
+        res.json(foundAuditPlans);
+    })
+});
+
+router.get('/:id', function(req, res) {
+    const auditplanId = req.params.id;
+  
+    AuditPlan.findById(auditplanId)
+          .exec(function(err, foundAuditPlan) {
+
+            // console.log(foundAuditPlan);
+  
+      if (err) {
+        return res.status(422).send({errors: [{title: 'Audit Plan Data Error!', detail: 'Could not find this Data!'}]});
+      }
+  
+      return res.json(foundAuditPlan);
+    });
+  });
+
+router.get('/getStatus/:status', function(req,res){
+
+    const auditStatus = req.params.status;
+    const query = auditStatus ? {status: auditStatus.toLowerCase()} : {};
+
+    AuditPlan.find(query)
+             .exec(function(err,foundAudits){
+
+                if (err) {
+                    return res.status(422).send({errors: [{title: 'test Audit Plan Data Error!', detail: 'Could not find this Data!'}]});
+                  }
+
+                  return res.json(foundAudits)
+             });
+});
+
     
                 
 

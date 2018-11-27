@@ -1,6 +1,7 @@
 const User = require('./models/user');
 const UniversityData = require('./models/universitydata');
 const universityDbData = require('./universitydata.json');
+const auditData = require('./models/auditplan');
 //let universities = null;
 class FakeDb {
 
@@ -15,31 +16,14 @@ class FakeDb {
       "password": "testtest1"
       }
     ];
-    //fakeDbData.users;
      this.universities = universityDbData.universities;
-    // this.universities = [
-    //   {
-    //     "University": "Northeastern",
-    //     "UniversityArea": "Academic",
-    //     "Owner": "Bouve",
-    //     "AuditArea": "Bouve College Health Sciences",
-    //     "Description": "",
-    //     "": ""
-    //     },
-    //     {
-    //     "University": "Northeastern",
-    //     "UniversityArea": "Academic",
-    //     "Owner": "Bouve",
-    //     "AuditArea": "Center for Drug Discovery",
-    //     "Description": "",
-    //     "": ""
-    //     }
-    // ];
+  
   }
 
   async cleanDb() {
     await User.remove({});
     await UniversityData.remove({});
+    await auditData.remove({});
   }
 
   pushDataToDb() {

@@ -25,6 +25,7 @@ const auditPlanSchema = new Schema({
   DaysRequired: { type: Number, required: false, lowercase: false },
   ElapsedMonths: { type: Number, required: false, lowercase: false },
   createdAt: { type: Date, default: Date.now },
+  status:{type: String, required:false},
   unversitydata_id: { type: String },
   user_ids:{type: String },
   user: [UserSchema],
