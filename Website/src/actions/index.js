@@ -310,12 +310,14 @@ const fetchAuditPlannedStatusFail = (errors) => {
 }
 
 export const fetchAuditPlannedStatus = (status) => {
+  debugger;
   const url = `/api/v1/auditplans/getStatus${status}`;
   return dispatch => {
     dispatch(fetchAuditPlannedStatusInit());
     axios.get(url)
     .then(res => res.data )
-    .then(auditplans => dispatch(fetchAuditPlannedStatusSuccess(auditplans)))
+    .then(test=> console.log(test))
+    .then(auditPlannedStatus => dispatch(fetchAuditPlannedStatusSuccess(auditPlannedStatus)))
     .catch(({response}) => dispatch(fetchAuditPlannedStatusFail(response.data.errors)))
   }
 }
