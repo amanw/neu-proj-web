@@ -64,8 +64,8 @@ class SideBar extends Component {
   return (
   <Menu pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } styles={ styles } onStateChange={ isMenuOpen }>
     <a id="home" className="menu-item" href="/index"><i className="fas fa-tachometer-alt"/><span>DashBoard</span></a>
-    <a id="about" className="menu-item" href="/university"><i className="fas fa-university"/><span>University Data</span></a>
-    <a id="contact" className="menu-item" href="/contact">Contact</a>
+    <a id="univerity" className="menu-item" href="/university"><i className="fas fa-university"/><span>University Data</span></a>
+    <a id="AuditPlanList" className="menu-item" href="/auditplanlist"><i className="fa fa-list-alt"/><span>Audit Data</span></a>
     <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a>
   </Menu>
   );

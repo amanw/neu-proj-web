@@ -22,6 +22,7 @@
     "react-scripts": "2.1.0",
     "react-select": "^2.1.1",
     "react-toastify": "^4.4.0",
+    "react-widgets": "^4.4.7",
     "redux": "^4.0.1",
     "redux-form": "^7.4.2",
     "redux-thunk": "^2.3.0"

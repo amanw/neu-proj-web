@@ -10,9 +10,12 @@ import Header from 'components/shared/Header';
 import Footer from 'components/shared/Footer';
 import Index from 'components/shared/index';
 import University from 'components/university/UniversityList';
-import UniversityAdd from 'components/university/UniversityAdd'
-import UniversityEdit from 'components/university/UniversityEdit'
-import AuditPlan from 'components/auditplan/Auditplan'
+import UniversityAdd from 'components/university/UniversityAdd';
+import UniversityEdit from 'components/university/UniversityEdit';
+import AuditPlan from 'components/auditplan/Auditplan';
+import AuditPlanEdit from 'components/auditplan/AuditplanEdit';
+import Scheduler from 'components/scheduler/Scheduler';
+import AuditPlanList from 'components/auditplan/AuditPlanList';
 import { Register } from 'components/register/Register';
 import SideBar from 'components/shared/SideBar';
 
@@ -58,6 +61,9 @@ class App extends Component {
               <ProtectedRoute exact path='/university/new' component={UniversityAdd} />
               <ProtectedRoute exact path='/university/:id' component={UniversityEdit} />
               <ProtectedRoute exact path='/auditplan/new/:id' component={AuditPlan} />
+              <ProtectedRoute exact path='/auditplan/edit/:id' component={AuditPlanEdit} />
+              <ProtectedRoute exact path='/auditplanlist' component={AuditPlanList} />
+              <ProtectedRoute exact path='/scheduler/:id' component={Scheduler} />
               <ProtectedRoute exact path='/register' component={Register} />
             </Switch>
           </main>

@@ -49,6 +49,7 @@ const re = RegExp('^(?:[0-9]|0[1-9])$');
       status:"planned",
       unversitydata_id: this.props.match.params.id
     }
+    console.log(JSON.stringify(data));
     this.props.dispatch(actions.auditAdd(data));
   }
  updateResidualRisk(){
@@ -222,14 +223,14 @@ const re = RegExp('^(?:[0-9]|0[1-9])$');
     //     return <Redirect to={{pathname:'/university'}}/>
     //   }
     if(isAdded){
-        return <Redirect to={{pathname:'/university'}}/>
+        return <Redirect to={{pathname:'/auditplanlist'}}/>
     }
 
     return (
       <div id ="page-content-wrapper">
       <nav aria-label="breadcrumb">
          <ol className="breadcrumb">
-            <li className="breadcrumb-item active" aria-current="page"><i className="fas fa-plus"/><span> University Add Data </span></li>
+            <li className="breadcrumb-item active" aria-current="page"><i className="fas fa-plus"/><span> Audit Add Data </span></li>
          </ol>
       </nav>
       

@@ -333,7 +333,7 @@ a:focus {
 main {
   height: 100%;
   text-align: center;
-  overflow: auto;
+  overflow: scroll;
   min-height: 700px; }
 
 h1 {

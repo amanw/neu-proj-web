@@ -16,6 +16,11 @@ class UniversityList extends React.Component {
             isDeleted : false 
         }
 
+        this.options = {
+            defaultSortName: '_id',  // default sort column name
+            defaultSortOrder: 'desc'  // default sort order
+          };
+
        
     }
     componentWillMount() {
@@ -130,12 +135,12 @@ class UniversityList extends React.Component {
         }
             <button type="button" className="btn btn-info react-bs-table-add-btn addbutton" onClick = {this.routeChange}><span><i className="fa glyphicon glyphicon-plus fa-plus"></i> New</span></button>
             
-            <BootstrapTable data={this.props.universities.data} striped={true} hover={true} pagination={true} search={ true } multiColumnSearch={ true } exportCSV={true}>
+            <BootstrapTable data={this.props.universities.data} striped={true} hover={true} pagination={true} search={ true } multiColumnSearch={ true } exportCSV={true} options={this.options}>
             <TableHeaderColumn isKey dataField='_id' hidden={true}>ID</TableHeaderColumn>
             <TableHeaderColumn dataField='University'>University</TableHeaderColumn>
-            <TableHeaderColumn dataField='UniversityArea' dataSort = {true}>UniversityArea</TableHeaderColumn>
-            <TableHeaderColumn dataField='Owner'>Owner</TableHeaderColumn>
-            <TableHeaderColumn dataField='AuditArea'>AuditArea</TableHeaderColumn>
+            <TableHeaderColumn dataField='UniversityArea' dataSort = {true} >UniversityArea</TableHeaderColumn>
+            <TableHeaderColumn dataField='Owner' filter={ { type: 'TextFilter', delay: 1000 } } tdStyle={ { whiteSpace: 'normal' } }>Owner</TableHeaderColumn>
+            <TableHeaderColumn dataField='AuditArea' tdStyle={ { whiteSpace: 'normal' } }>AuditArea</TableHeaderColumn>
             <TableHeaderColumn dataField='Description' tdStyle={ { whiteSpace: 'normal' } } searchable={ false }>Description</TableHeaderColumn>
             <TableHeaderColumn dataField="button" dataFormat={this.cellButton.bind(this)}>Buttons</TableHeaderColumn>
             </BootstrapTable>

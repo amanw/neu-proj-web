@@ -28,7 +28,14 @@ import {
          FETCH_AUDITPLANBYID_FAIL,
          FETCH_AUDITPLANNEDSTATUS_INIT,
          FETCH_AUDITPLANNEDSTATUS_SUCCESS,
-         FETCH_AUDITPLANNEDSTATUS_FAIL
+         FETCH_AUDITPLANNEDSTATUS_FAIL,
+         AUDITPLAN_DELETE_SUCCESS,
+         AUDITPLAN_DELETE_FAIL,
+         AUDITPLAN_UPDATE_SUCCESS,
+         AUDITPLAN_UPDATE_FAIL,
+         FETCH_USEREMAILS_INIT,
+         FETCH_USEREMAILS_SUCCESS,
+         FETCH_USEREMAILS_FAIL
          } from './types';
 
 const axiosInstance = axiosService.getInstance();
@@ -271,6 +278,7 @@ const fetchAuditPlansInit = () => {
 }
 
 const fetchAuditPlansFail = (errors) => {
+  debugger;
   return {
     type: FETCH_AUDITPLANS_FAIL,
     errors
@@ -282,7 +290,7 @@ export const fetchAuditPlans = () => {
   return dispatch => {
     dispatch(fetchAuditPlansInit());
     axios.get(url)
-    .then(res => res.data )
+    .then(res => res.data)
     .then(auditplans => dispatch(fetchAuditPlansSuccess(auditplans)))
     .catch(({response}) => dispatch(fetchAuditPlansFail(response.data.errors)))
   }
@@ -310,15 +318,141 @@ const fetchAuditPlannedStatusFail = (errors) => {
 }
 
 export const fetchAuditPlannedStatus = (status) => {
-  debugger;
-  const url = `/api/v1/auditplans/getStatus${status}`;
+  const url = `/api/v1/auditplans/getStatus/${status}`;
   return dispatch => {
     dispatch(fetchAuditPlannedStatusInit());
     axios.get(url)
     .then(res => res.data )
-    .then(test=> console.log(test))
     .then(auditPlannedStatus => dispatch(fetchAuditPlannedStatusSuccess(auditPlannedStatus)))
     .catch(({response}) => dispatch(fetchAuditPlannedStatusFail(response.data.errors)))
+  }
+}
+
+const auditDeleteSuccess = (auditId) => {
+  return {
+    type: AUDITPLAN_DELETE_SUCCESS,
+    auditId
+  } 
+}
+
+const auditDeleteFail = (errors) => {
+  return {
+    type: AUDITPLAN_DELETE_FAIL,
+    errors
+  }
+}
+
+export const auditDelete = (auditId) => {
+  return  dispatch => {
+  axiosInstance.delete(`/auditplans/${auditId}`)
+  .then(res => res.data)
+  .then(audits => {
+    dispatch(auditDeleteSuccess(auditId));})
+    .catch(({response}) => dispatch(auditDeleteFail(response.data.errors)))
+
+}
+}
+
+
+const fetchAuditPlansByIdInit = () => {
+  return {
+    type:FETCH_AUDITPLANBYID_INIT
+  }
+}
+
+const fetchAuditPlansByIdSucces = (auditData) => {
+  debugger;
+  var value_array = auditData.NextAuditDate.split('-');
+  var newData = {
+    Month:value_array[0],
+    Year:value_array[1],
+    DaysRequired:auditData.DaysRequired,
+    ElapsedMonths:auditData.ElapsedMonths,
+    RiskFactor:auditData.RiskFactor,
+    RiskLevel:auditData.RiskLevel,
+    unversitydata_id: auditData.unversitydata_id,
+    status:auditData.status
+  };
+  return {
+    type:FETCH_AUDITPLANBYID_SUCCESS,
+    newData
+  }
+}
+
+const fetchAuditPlansByIdFail = (errors) => {
+  return {
+    type:FETCH_AUDITPLANBYID_FAIL,
+    errors
+  }
+}
+
+export const fetchAuditPlansById = (auditId) => {
+  const url = `/api/v1/auditplans/audit/${auditId}`;
+  return dispatch => {
+    dispatch(fetchAuditPlansByIdInit());
+    axios.get(url)
+    .then(res => res.data)
+    .then(auditData => dispatch(fetchAuditPlansByIdSucces(auditData)))
+    .catch(({response}) => dispatch(fetchAuditPlansByIdFail(response.data.errors)))
+  }
+}
+
+
+const auditPlanUpdateSucces = (updatedaudit) => {
+  debugger;
+  return {
+    type: AUDITPLAN_UPDATE_SUCCESS,
+    updatedaudit
+  }
+}
+
+const auditPlanUpdateFail = (errors) => {
+  debugger;
+  return {
+    type: AUDITPLAN_UPDATE_FAIL,
+    errors
+  }
+}
+
+export const auditPlanUpdate = (id,updatedauditPlan) => dispatch => {
+  debugger;
+  return axiosInstance.patch(`/auditplans/${id}`, updatedauditPlan)
+    .then(res=>console.log(res.data))
+    .then(x => console.log(x))
+    .then(updatedaudit => {
+      dispatch(auditPlanUpdateSucces(updatedaudit));})
+    .catch(({response}) => dispatch(auditPlanUpdateFail(response.data.errors)))
+}
+
+
+const fetchUserEmailsInit = () => {
+  return {
+    type: FETCH_USEREMAILS_INIT
+  }
+}
+
+const fetchUserEmailsFail = (errors) => {
+  return {
+    type: FETCH_USEREMAILS_FAIL,
+    errors
+  }
+}
+
+const fetchUserEmailsSuccess = (emails) => {
+  return {
+    type: FETCH_USEREMAILS_SUCCESS,
+    emails
+  }
+}
+
+export const fetchUserEmails = () => {
+  const url = '/api/v1/auditplans/users';
+  return dispatch => {
+    dispatch(fetchUserEmailsInit());
+    axios.get(url)
+    .then(res => res.data)
+    .then(emails => dispatch(fetchUserEmailsSuccess(emails)))
+    .catch(({response}) => dispatch(fetchUserEmailsFail(response.data.errors)))
   }
 }
 
