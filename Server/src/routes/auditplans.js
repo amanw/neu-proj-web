@@ -7,9 +7,9 @@ const { normalizeErrors } = require('../helpers/mongoose');
 const mongoose = require('mongoose');
 const UserCtrl = require('../database/user');
 var async = require("async");
-
-router.post('/create', function(req, res,next) {
-    var ObjectID = mongoose.mongo.ObjectId;
+var ObjectID = mongoose.mongo.ObjectId;
+router.post('/create', function(req, res) {
+    
     const { LastAuditDate, NextAuditDate, RiskFactor, RiskLevel, DaysRequired, ElapsedMonths,status, unversitydata_id } = req.body;
     
     const auditplan = new AuditPlan({LastAuditDate, NextAuditDate, RiskFactor, RiskLevel, DaysRequired, ElapsedMonths,status, unversitydata_id});
@@ -23,6 +23,7 @@ router.post('/create', function(req, res,next) {
             res.status(422).send({errors: normalizeErrors(err.errors)});
         }
         if(foundUniversity != null) {
+        auditplan.AuditArea = foundUniversity.AuditArea;
         auditplan.unversitydata.push(foundUniversity);
         save_status = true
         }
@@ -58,7 +59,7 @@ router.get('', function(req, res) {
     })
 });
 
-router.get('/:id', function(req, res) {
+router.get('/audit/:id', function(req, res) {
     const auditplanId = req.params.id;
   
     AuditPlan.findById(auditplanId)
@@ -77,7 +78,7 @@ router.get('/:id', function(req, res) {
 router.get('/getStatus/:status', function(req,res){
 
     const auditStatus = req.params.status;
-    const query = auditStatus ? {status: auditStatus.toLowerCase()} : {};
+    const query = auditStatus ? {status: auditStatus.toLowerCase()} : {errors: [{title: 'test Audit Plan Data Error!', detail: 'Could not find this Data!'}]};
 
     AuditPlan.find(query)
              .exec(function(err,foundAudits){
@@ -86,9 +87,146 @@ router.get('/getStatus/:status', function(req,res){
                     return res.status(422).send({errors: [{title: 'test Audit Plan Data Error!', detail: 'Could not find this Data!'}]});
                   }
 
+                if (foundAudits.length === 0) {
+                    return res.status(422).send({errors: [{title: 'test Audit Plan Data Error!', detail: 'Could not find this Data!'}]});
+                }
+
                   return res.json(foundAudits)
              });
 });
+
+
+router.delete('/:id', function(req, res) {
+
+    AuditPlan
+      .findById(req.params.id)
+      .exec(function(err, foundAudit) {
+  
+        if (err) {
+          return res.status(422).send({errors: normalizeErrors(err.errors)});
+        }
+        foundAudit.remove(function(err) {
+          if (err) {
+            return res.status(422).send({errors: normalizeErrors(err.errors)});
+          }
+  
+          return res.json({'status': 'deleted',
+                            'ID': req.params.id
+                          }
+          );
+        });
+      });
+});
+
+
+router.patch('/:id', function(req, res) {
+
+    const auditData = req.body;
+    var update = false;
+    var useridUpdate = false;
+    var counter = 0;
+    var save_counter=0;
+    AuditPlan
+      .findById(req.params.id)
+      .exec(function(err, foundAudit) {
+        if(foundAudit == null) {
+          return res.status(422).json({errors: [{title: 'Audits not found!', detail: 'Something went wrong! Please try again..'}]})
+        }
+        if (err) {
+          return res.status(422).send({errors: normalizeErrors(err.errors)});
+        }
+        foundAudit.set(auditData);
+        foundAudit.save(function(err) { 
+          if (err) {
+            return res.status(422).send({errors: normalizeErrors(err.errors)});
+          }
+  
+          return res.status(200).send(foundAudit);
+        });
+});
+});
+
+
+
+router.post('/getGraphData',function(req,res){
+  let auditStatus = "planned";
+  let query = auditStatus ? {status: auditStatus.toLowerCase()} : {};
+  var res_data = [];
+  var plannedstatus = true;
+  var scheduledstatus = false;
+  var closedstatus = false;
+  AuditPlan.find(query)
+           .exec(function(err,foundAudits){
+             console.log(foundAudits);
+              if (err) {
+                  return res.status(422).send({errors: [{title: 'test Audit Plan Data Error!', detail: 'Could not find this Data!'}]});
+                }
+
+              var newData = {
+                  title:"Planned Audits",
+                  value:foundAudits.length,
+                  color:"red"
+              }
+              console.log("NEW DATA FOR PLANNED");
+              console.log(newData);
+              if(newData != null){
+                  res_data.push(newData);
+                  auditStatus = "scheduled";
+                  query = auditStatus ? {status: auditStatus.toLowerCase()} : {};
+              }   
+ 
+  
+      AuditPlan.find(query)
+           .exec(function(err,foundAudits){
+
+              if (err) {
+                  return res.status(422).send({errors: [{title: 'test Audit Plan Data Error!', detail: 'Could not find this Data!'}]});
+                }
+              // if (foundAudits.length === 0) {
+              //     return res.status(422).send({errors: [{title: 'test Audit Plan Data Error!', detail: 'Could not find this Data!'}]});
+              // }
+
+              var newData = {
+                  title:"Scheduled Audits",
+                  value:foundAudits.length,
+                  color:"red"
+              }
+              if(newData != null){
+                  res_data.push(newData);
+                  plannedstatus = false;
+                  scheduledstatus = true;
+                  auditStatus = "scheduled";
+                  query = auditStatus ? {status: auditStatus.toLowerCase()} : {};
+              }
+              
+              if(scheduledstatus) {
+                return  res.status(200).send(res_data);
+              }
+               
+  });
+  
+});
+
+
+  
+});
+
+router.get('/users', function(req, res) {
+  User.find({}, function(err, foundUsers) {
+
+      if (err) {
+          return res.status(422).send({errors: normalizeErrors(err.errors)});
+        }
+        const universityAreas = [...new Set(foundUsers.map(item => item.email+","+item.username))]
+      if (foundUsers.length === 0) {
+          return res.status(422).send({errors: [{title: 'No User Data Found!', detail: 'There are no User Data for the required approach '}]});
+      }
+      res.json(universityAreas);
+  })
+});
+
+
+
 
     
                 

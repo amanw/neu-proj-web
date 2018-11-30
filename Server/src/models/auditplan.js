@@ -17,6 +17,7 @@ var UniversitySchema = new Schema({
   Description: { type: String}
 });
 
+
 const auditPlanSchema = new Schema({
   LastAuditDate: { type: String, required: false},
   NextAuditDate: { type: String, required: true, lowercase: false },
@@ -26,6 +27,7 @@ const auditPlanSchema = new Schema({
   ElapsedMonths: { type: Number, required: false, lowercase: false },
   createdAt: { type: Date, default: Date.now },
   status:{type: String, required:false},
+  AuditArea:{type: String},
   unversitydata_id: { type: String },
   user_ids:{type: String },
   user: [UserSchema],

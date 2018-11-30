@@ -69,7 +69,7 @@ router.get('/:id', function(req, res) {
         if (err) {
           return res.status(422).send({errors: normalizeErrors(err.errors)});
         }
-
+        
         foundUniversity.set(universityData);
         foundUniversity.save(function(err) {
           if (err) {
