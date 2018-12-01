@@ -8,6 +8,8 @@ const mongoose = require('mongoose');
 const UserCtrl = require('../database/user');
 var async = require("async");
 var ObjectID = mongoose.mongo.ObjectId;
+
+// To create the Audit plan 
 router.post('/create', function(req, res) {
     
     const { LastAuditDate, NextAuditDate, RiskFactor, RiskLevel, DaysRequired, ElapsedMonths,status, unversitydata_id } = req.body;
@@ -45,6 +47,7 @@ router.post('/create', function(req, res) {
             
 });
 
+// to get the list of the Audit data
 router.get('', function(req, res) {
     AuditPlan.find({}, function(err, foundAuditPlans) {
 
@@ -59,6 +62,7 @@ router.get('', function(req, res) {
     })
 });
 
+// To get the list based on ID
 router.get('/audit/:id', function(req, res) {
     const auditplanId = req.params.id;
   
@@ -75,6 +79,7 @@ router.get('/audit/:id', function(req, res) {
     });
   });
 
+// to get the list 
 router.get('/getStatus/:status', function(req,res){
 
     const auditStatus = req.params.status;
@@ -96,6 +101,7 @@ router.get('/getStatus/:status', function(req,res){
 });
 
 
+/** To delete the Audit Plan Data based on ID. */ 
 router.delete('/:id', function(req, res) {
 
     AuditPlan
@@ -118,14 +124,10 @@ router.delete('/:id', function(req, res) {
       });
 });
 
-
+// To edit the data 
 router.patch('/:id', function(req, res) {
 
     const auditData = req.body;
-    var update = false;
-    var useridUpdate = false;
-    var counter = 0;
-    var save_counter=0;
     AuditPlan
       .findById(req.params.id)
       .exec(function(err, foundAudit) {
@@ -147,7 +149,7 @@ router.patch('/:id', function(req, res) {
 });
 
 
-
+// To get the Dasboard Graph Data
 router.post('/getGraphData',function(req,res){
   let auditStatus = "planned";
   let query = auditStatus ? {status: auditStatus.toLowerCase()} : {};
@@ -211,6 +213,7 @@ router.post('/getGraphData',function(req,res){
   
 });
 
+/**To get the users data */
 router.get('/users', function(req, res) {
   User.find({}, function(err, foundUsers) {
 
@@ -224,12 +227,5 @@ router.get('/users', function(req, res) {
       res.json(universityAreas);
   })
 });
-
-
-
-
-    
-                
-
 
   module.exports = router;

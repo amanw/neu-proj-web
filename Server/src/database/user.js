@@ -3,6 +3,7 @@ const { normalizeErrors } = require('../helpers/mongoose');
 const jwt = require('jsonwebtoken');
 const config = require('../config');
 
+//**Authorization for Login */
 exports.auth =  function(req, res) {
   const { email, password } = req.body;
 
@@ -32,6 +33,7 @@ exports.auth =  function(req, res) {
   });
 }
 
+/**Register the Users  */
 exports.register =  function(req, res) {
   const { username, email, password, passwordConfirmation } = req.body;
 
@@ -68,6 +70,7 @@ exports.register =  function(req, res) {
   })
 }
 
+/**Authorization Middleware */
 exports.authMiddleware = function(req, res, next) {
   const token = req.headers.authorization;
 

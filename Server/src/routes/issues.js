@@ -1,0 +1,88 @@
+const express = require('express');
+const router = express.Router();
+const issuetrackingData = require('../models/issuetracking');
+const { normalizeErrors } = require('../helpers/mongoose');
+
+/** To get the list for Issue */ 
+router.get('', function(req, res) {
+    issuetrackingData.find({}, function(err, foundissuetrackingData) {
+
+        if (err) {
+            return res.status(422).send({errors: normalizeErrors(err.errors)});
+          }
+        
+        if (foundissuetrackingData.length === 0) {
+            return res.status(422).send({errors: [{title: 'No Issue Data Found!', detail: 'There are no Issue Data for the required approach '}]});
+        }
+        res.json(foundissuetrackingData);
+    })
+});
+
+
+/** To get the issuedata based on ID */ 
+router.get('/issues/:id', function(req, res) {
+    const issueId = req.params.id;
+  
+    issuetrackingData.findById(issueId)
+          .exec(function(err, foundIssueData) {
+
+  
+      if (err) {
+        return res.status(422).send({errors: [{title: 'Issue Data Error!', detail: 'Could not find this Data!'}]});
+      }
+  
+      return res.json(foundIssueData);
+    });
+  });
+
+
+/**Patch the Data based on ID */
+router.patch('/:id', function(req, res) {
+
+    const issue = req.body;
+  
+    issuetrackingData
+      .findById(req.params.id)
+      .exec(function(err, foundIssueData) {
+  
+        if (err) {
+          return res.status(422).send({errors: normalizeErrors(err.errors)});
+        }
+        
+        foundIssueData.set(issue);
+        foundIssueData.save(function(err) {
+          if (err) {
+            return res.status(422).send({errors: normalizeErrors(err.errors)});
+          }
+  
+          return res.status(200).send(foundIssueData);
+        });
+      });
+});
+
+/** To delete the Data based on ID. */ 
+router.delete('/:id', function(req, res) {
+
+    issuetrackingData
+      .findById(req.params.id)
+      .exec(function(err, foundIssueData) {
+  
+        if (err) {
+          return res.status(422).send({errors: normalizeErrors(err.errors)});
+        }
+        foundIssueData.remove(function(err) {
+          if (err) {
+            return res.status(422).send({errors: normalizeErrors(err.errors)});
+          }
+  
+          return res.json({'status': 'deleted',
+                            'ID': req.params.id
+                          }
+          );
+        });
+      });
+});
+
+
+
+

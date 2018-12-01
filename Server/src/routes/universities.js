@@ -10,23 +10,24 @@ router.get('/secret', UserCtrl.authMiddleware, function(req, res) {
     res.json({"secret": true});
   });
 
-  router.post('/create', function(req, res) {
-    const { University = "Northeastern", UniversityArea, Owner, AuditArea, Description } = req.body;
-  
-    const universitydata = new UniversityData({University, UniversityArea, Owner, AuditArea, Description});
+/**Create the University Data */
+router.post('/create', function(req, res) {
+  const { University = "Northeastern", UniversityArea, Owner, AuditArea, Description } = req.body;
 
-     universitydata.save()
-     .then(item => {
-         res.send("Data created to your database");
-     })
-     .catch(err => {
-        res.status(422).send({errors: normalizeErrors(err.errors)});
-     });
+  const universitydata = new UniversityData({University, UniversityArea, Owner, AuditArea, Description});
 
-  });
+    universitydata.save()
+    .then(item => {
+        res.send("Data created to your database");
+    })
+    .catch(err => {
+      res.status(422).send({errors: normalizeErrors(err.errors)});
+    });
+
+});
 
 
-
+/**Get the List of All the University Data */
 router.get('', function(req, res) {
     UniversityData.find({}, function(err, foundUniversityData) {
 
@@ -41,6 +42,7 @@ router.get('', function(req, res) {
     })
 });
 
+/**Get the Data based on ID */
 router.get('/:id', function(req, res) {
     const universityId = req.params.id;
   
@@ -57,7 +59,7 @@ router.get('/:id', function(req, res) {
     });
   });
 
-
+/**Patch the Data based on ID */
   router.patch('/:id', function(req, res) {
 
     const universityData = req.body;
@@ -81,29 +83,30 @@ router.get('/:id', function(req, res) {
       });
   });
 
-  router.patch('/:id', function(req, res) {
+  // router.patch('/:id', function(req, res) {
 
-    const universityData = req.body;
+  //   const universityData = req.body;
   
-    UniversityData
-      .findById(req.params.id)
-      .exec(function(err, foundUniversity) {
+  //   UniversityData
+  //     .findById(req.params.id)
+  //     .exec(function(err, foundUniversity) {
   
-        if (err) {
-          return res.status(422).send({errors: normalizeErrors(err.errors)});
-        }
+  //       if (err) {
+  //         return res.status(422).send({errors: normalizeErrors(err.errors)});
+  //       }
 
-        foundUniversity.set(universityData);
-        foundUniversity.save(function(err) {
-          if (err) {
-            return res.status(422).send({errors: normalizeErrors(err.errors)});
-          }
+  //       foundUniversity.set(universityData);
+  //       foundUniversity.save(function(err) {
+  //         if (err) {
+  //           return res.status(422).send({errors: normalizeErrors(err.errors)});
+  //         }
   
-          return res.status(200).send(foundUniversity);
-        });
-      });
-  });
+  //         return res.status(200).send(foundUniversity);
+  //       });
+  //     });
+  // });
 
+  /**Deletion of the data based on the ID */
   router.delete('/:id', function(req, res) {
 
     UniversityData
