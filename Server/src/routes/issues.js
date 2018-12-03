@@ -1,7 +1,60 @@
 const express = require('express');
 const router = express.Router();
 const issuetrackingData = require('../models/issuetracking');
+const AuditData = require('../models/auditplan');
 const { normalizeErrors } = require('../helpers/mongoose');
+const mongoose = require('mongoose');
+var ObjectID = mongoose.mongo.ObjectId;
+
+/**Create the Issue Tracking Data */
+router.post('/create', function(req, res) {
+    const { Name, Description, Recommendation, Owner, status, RiskLevel,ManagementResponse, CompletionDate, AssignedTo, IssueManager, RevisedCompletionDate, FollowUpTesting, ImplementationDate, ClosedDate, auditId } = req.body;
+  
+    const issuedata = new issuetrackingData({Name, Description, Recommendation, Owner, status, RiskLevel,ManagementResponse, CompletionDate, AssignedTo, IssueManager, RevisedCompletionDate, FollowUpTesting, ImplementationDate, ClosedDate, auditId });
+    var save_status = false;
+    issuetrackingData.findOne({"auditId": issuedata.auditId},
+    function(err, foundIssueData){
+
+      if(foundIssueData == null){
+
+    
+    AuditData.findOne({"_id": new ObjectID(issuedata.auditId) },
+    function(err, foundAudit){
+        if(err)
+        {
+            res.status(422).send({errors: normalizeErrors(err.errors)});
+        }
+        if(foundAudit != null) {
+        issuedata.Name = foundAudit.unversitydata[0].AuditArea;
+        issuedata.Description = foundAudit.unversitydata[0].Description;
+        issuedata.Owner = foundAudit.unversitydata[0].Owner;
+        save_status = true
+        }
+        else{
+            return res.status(422).send({errors: [{title: 'AuditData ID not found!', detail: 'Something went wrong! Please try again..'}]});
+        }
+        if(save_status) {
+          issuedata.save()
+                    .then(item => {
+                    return res.status(200).send("Data created to your database");
+                    })
+                    .catch(err => {
+                        return res.status(422).send({errors: normalizeErrors(err.errors)});
+                    });
+        }
+        }).catch(err => {
+            return res.status(422).send({errors: normalizeErrors(err.errors)});
+        });
+      }
+      else{
+        return res.status(422).send({errors: [{title: 'Issue Already created', detail: 'Issue Already created'}]});
+      }
+      }
+      )
+      
+  
+});
+
 
 /** To get the list for Issue */ 
 router.get('', function(req, res) {
@@ -20,7 +73,7 @@ router.get('', function(req, res) {
 
 
 /** To get the issuedata based on ID */ 
-router.get('/issues/:id', function(req, res) {
+router.get('/:id', function(req, res) {
     const issueId = req.params.id;
   
     issuetrackingData.findById(issueId)
@@ -33,7 +86,7 @@ router.get('/issues/:id', function(req, res) {
   
       return res.json(foundIssueData);
     });
-  });
+});
 
 
 /**Patch the Data based on ID */
@@ -83,6 +136,6 @@ router.delete('/:id', function(req, res) {
       });
 });
 
-
+module.exports = router;
 
 

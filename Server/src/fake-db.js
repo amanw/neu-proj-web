@@ -2,6 +2,7 @@ const User = require('./models/user');
 const UniversityData = require('./models/universitydata');
 const universityDbData = require('./universitydata.json');
 const auditData = require('./models/auditplan');
+const issueData = require('./models/issuetracking')
 //let universities = null;
 class FakeDb {
 
@@ -9,11 +10,13 @@ class FakeDb {
     this.users = [{
       "username": "Test User",
       "email": "test@gmail.com",
-      "password": "testtest"
+      "password": "test123",
+       "isAdmin":true
       },{
       "username": "Test User1",
       "email": "test1@gmail.com",
-      "password": "testtest1"
+      "password": "testtest1",
+      "isAdmin":false
       }
     ];
      this.universities = universityDbData.universities;
@@ -24,6 +27,7 @@ class FakeDb {
     await User.remove({});
     await UniversityData.remove({});
     await auditData.remove({});
+    await issueData.remove({})
   }
 
   pushDataToDb() {

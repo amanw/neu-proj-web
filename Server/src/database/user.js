@@ -23,7 +23,8 @@ exports.auth =  function(req, res) {
     if (user.hasSamePassword(password)) {
       const token = jwt.sign({
         userId: user.id,
-        username: user.username
+        username: user.username,
+        isAdmin : user.isAdmin
       }, config.SECRET, { expiresIn: '1h'});
 
       return res.json(token);
@@ -35,7 +36,7 @@ exports.auth =  function(req, res) {
 
 /**Register the Users  */
 exports.register =  function(req, res) {
-  const { username, email, password, passwordConfirmation } = req.body;
+  const { username, email, password, passwordConfirmation, isAdmin } = req.body;
 
   if (!password || !email) {
     return res.status(422).send({errors: [{title: 'Data missing!', detail: 'Provide email and password!'}]});
@@ -57,7 +58,8 @@ exports.register =  function(req, res) {
     const user = new User({
       username,
       email,
-      password
+      password,
+      isAdmin
     });
 
     user.save(function(err) {

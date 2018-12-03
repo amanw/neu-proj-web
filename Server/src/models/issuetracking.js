@@ -6,7 +6,7 @@ const issuetrackingSchema = new Schema({
     Description:{type: String, required:false},
     Recommendation:{type:String, required:true},
     Owner:{type:String, required:true},
-    statue:{type:String, required:true},
+    status:{type:String, required:true},
     RiskLevel:{type:String, required:true},
     ManagementResponse:{type:String, required:true},
     CompletionDate:{type:String, required:false},
@@ -15,7 +15,9 @@ const issuetrackingSchema = new Schema({
     RevisedCompletionDate:{type:String, required:false},
     FollowUpTesting:{type:String, required:false},
     ImplementationDate:{type:String, required:false},
-    ClosedDate:{type:String, required:false}
+    ClosedDate:{type:String, required:false},
+    auditId:{type:String,required:true}
+    
 
 });
 

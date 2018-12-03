@@ -17,7 +17,6 @@ router.post('/create', function(req, res) {
     const auditplan = new AuditPlan({LastAuditDate, NextAuditDate, RiskFactor, RiskLevel, DaysRequired, ElapsedMonths,status, unversitydata_id});
     
     var save_status = false;
-
     UniversityData.findOne({"_id": new ObjectID(auditplan.unversitydata_id) },
     function(err, foundUniversity){
         if(err)
@@ -220,7 +219,8 @@ router.get('/users', function(req, res) {
       if (err) {
           return res.status(422).send({errors: normalizeErrors(err.errors)});
         }
-        const universityAreas = [...new Set(foundUsers.map(item => item.email+","+item.username))]
+        
+        const universityAreas =  [...new Set(foundUsers.map(item => item.email+","+item.username))];
       if (foundUsers.length === 0) {
           return res.status(422).send({errors: [{title: 'No User Data Found!', detail: 'There are no User Data for the required approach '}]});
       }
