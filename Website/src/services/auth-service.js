@@ -30,6 +30,10 @@ class AuthService {
   getUsername() {
     return this.decode(this.getToken()).username;
   }
+  
+  getUserisAdmin() {
+    return this.decode(this.getToken()).isAdmin;
+  }
 
   isValid(token) {
     return moment().isBefore(this.getExpiration(token));

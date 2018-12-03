@@ -8,7 +8,7 @@ import { required } from 'components/shared/form/validators';
 import { connect } from 'react-redux';
 
 let UniversityEditForm = props => {
-  const { handleSubmit, pristine, submitting, submitCb, valid, options,options1,options2, errors } = props
+  const { handleSubmit, pristine, submitting, submitCb, valid, options,options1, errors } = props
   
   return (
     <form onSubmit={handleSubmit(submitCb)}>

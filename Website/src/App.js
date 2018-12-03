@@ -16,6 +16,9 @@ import AuditPlan from 'components/auditplan/Auditplan';
 import AuditPlanEdit from 'components/auditplan/AuditplanEdit';
 import Scheduler from 'components/scheduler/Scheduler';
 import AuditPlanList from 'components/auditplan/AuditPlanList';
+import IssueAdd from 'components/issues/IssueAdd';
+import IssueEdit from 'components/issues/IssueEdit';
+import IssueList from 'components/issues/IssueList';
 import { Register } from 'components/register/Register';
 import SideBar from 'components/shared/SideBar';
 
@@ -64,6 +67,9 @@ class App extends Component {
               <ProtectedRoute exact path='/auditplan/edit/:id' component={AuditPlanEdit} />
               <ProtectedRoute exact path='/auditplanlist' component={AuditPlanList} />
               <ProtectedRoute exact path='/scheduler/:id' component={Scheduler} />
+              <ProtectedRoute exact path='/issues/new/:id' component={IssueAdd} />
+              <ProtectedRoute exact path='/issues/edit/:id' component={IssueEdit} />
+              <ProtectedRoute exact path='/issues' component={IssueList} />
               <ProtectedRoute exact path='/register' component={Register} />
             </Switch>
           </main>

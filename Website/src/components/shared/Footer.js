@@ -1,11 +1,13 @@
 import React from 'react';
-
+import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 class Footer extends React.Component {
 
     
     render() {
-        
+        const {isAuth} = this.props.auth;
+        if(isAuth) {
         return (
             // <p>test</p>
             <footer className="footer">
@@ -15,9 +17,17 @@ class Footer extends React.Component {
           </footer>
         )
     }
+    else {
+        return (null)
+    }
+    }
 
 }
 
+function mapStateToProps(state) {
+    return {
+      auth: state.auth
+    }
+  }
 
-
-export default (Footer)  
+export default withRouter(connect(mapStateToProps)(Footer));

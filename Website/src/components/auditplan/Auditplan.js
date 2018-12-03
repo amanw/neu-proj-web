@@ -49,7 +49,6 @@ const re = RegExp('^(?:[0-9]|0[1-9])$');
       status:"planned",
       unversitydata_id: this.props.match.params.id
     }
-    console.log(JSON.stringify(data));
     this.props.dispatch(actions.auditAdd(data));
   }
  updateResidualRisk(){
@@ -69,7 +68,7 @@ const re = RegExp('^(?:[0-9]|0[1-9])$');
 
   updateInternal(event){
     var val = parseInt(event.target.value);
-    if(event.target.value != ""  && re.test(val))
+    if(event.target.value !== ""  && re.test(val))
     {
       var res = parseInt(this.state.ControlledRisk);
       var sum = val + res;
@@ -89,7 +88,7 @@ const re = RegExp('^(?:[0-9]|0[1-9])$');
 
   updateLastAudit(event){
     var val = parseInt(event.target.value);
-    if(event.target.value != "" && re.test(val))
+    if(event.target.value !== "" && re.test(val))
     {
       var res = parseInt(this.state.ControlledRisk);
       var sum = val + res;
@@ -121,12 +120,12 @@ const re = RegExp('^(?:[0-9]|0[1-9])$');
      }
   }
   updateControlledLevelAndColor(value){
-    if(value >= 8)
+    if(value > 9)
     {
       this.setState({ControlledLevel:"High"});
       this.setState({ControlledColor:"red"});
     }
-    else if((value >= 4) && (value <=7)) 
+    else if((value >= 4) && (value <=9)) 
     {
       this.setState({ControlledLevel:"Med"})
       this.setState({ControlledColor:"orange"});
@@ -159,7 +158,7 @@ const re = RegExp('^(?:[0-9]|0[1-9])$');
   updateInput(event){
     debugger;
     var val = parseInt(event.target.value);
-    if(event.target.value != "" && re.test(val))
+    if(event.target.value !== "" && re.test(val))
     {
       
       var res = parseInt(this.state.InheritedRisk);
@@ -181,7 +180,7 @@ const re = RegExp('^(?:[0-9]|0[1-9])$');
   }
   updateComplexity(event){
     var val = parseInt(event.target.value);
-    if(event.target.value != "" && re.test(val))
+    if(event.target.value !== "" && re.test(val))
     {
     
     var res = parseInt(this.state.InheritedRisk);
@@ -200,7 +199,7 @@ const re = RegExp('^(?:[0-9]|0[1-9])$');
   }
   updateFinancing(event){
     var val = parseInt(event.target.value);
-    if(event.target.value != "" && re.test(val))
+    if(event.target.value !== "" && re.test(val))
     {
       
       var res = parseInt(this.state.InheritedRisk);
@@ -234,7 +233,7 @@ const re = RegExp('^(?:[0-9]|0[1-9])$');
          </ol>
       </nav>
       
-      <section id='register'>
+      <section id='auditplan'>
          <div className='bwm-form'>
             <div className='row'>
             

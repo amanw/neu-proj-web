@@ -18,7 +18,15 @@ export class Register extends React.Component {
   }
 
   registerUser(userData) {
-    actions.register(userData).then(
+    debugger;
+    var registerData = {
+      username: userData.username,
+      email:userData.email,
+      password:userData.password,
+      passwordConfirmation: userData.passwordConfirmation,
+      isAdmin:false
+    }
+    actions.register(registerData).then(
       registered => this.setState({redirect: true}),
       errors => this.setState({errors})
     );
@@ -28,7 +36,7 @@ export class Register extends React.Component {
     const { errors, redirect } = this.state;
 
     if (redirect) {
-      return <Redirect to={{pathname: '/login', state: { successRegister: true }}} />
+      return <Redirect to={{pathname: '/index', state: { successRegister: true }}} />
     }
 
     return (

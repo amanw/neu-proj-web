@@ -35,7 +35,22 @@ import {
          AUDITPLAN_UPDATE_FAIL,
          FETCH_USEREMAILS_INIT,
          FETCH_USEREMAILS_SUCCESS,
-         FETCH_USEREMAILS_FAIL
+         FETCH_USEREMAILS_FAIL,
+         FETCH_ISSUES_INIT,
+         FETCH_ISSUES_SUCCESS,
+         FETCH_ISSUES_FAIL,
+         FETCH_ISSUESBYID_INIT,
+         FETCH_ISSUESBYID_SUCCESS,
+         FETCH_ISSUESBYID_FAIL,
+         ISSUES_ADD_SUCCESS,
+         ISSUES_ADD_FAIL,
+         ISSUES_DELETE_SUCCESS,
+         ISSUES_DELETE_FAIL,
+         ISSUES_UPDATE_FAIL,
+         ISSUES_UPDATE_SUCCESS,
+         ISSUES_USERS_INIT,
+         ISSUES_USERS_SUCCESS,
+         ISSUES_USERS_FAIL
          } from './types';
 
 const axiosInstance = axiosService.getInstance();
@@ -44,10 +59,13 @@ const axiosInstance = axiosService.getInstance();
 
 const loginSuccess = () => {
   const username = authService.getUsername();
-
+  var newData = {
+      username :username,
+      isAdmin: authService.getUserisAdmin()
+  }
   return {
     type: LOGIN_SUCCESS,
-    username
+    newData
   }
 }
 
@@ -59,6 +77,7 @@ const loginFailure = (errors) => {
 }
 
 export const register = (userData) => {
+  debugger;
   return axios.post('/api/v1/users/register', userData).then(
     res => res.data,
     err => Promise.reject(err.response.data.errors)
@@ -95,7 +114,8 @@ export const logout = () => {
     type: LOGOUT
   }
 }
-// Universities Actions
+
+/** Universities Actions */
 const fetchUniversitiesSuccess = (universities) => {
 
   const universityAreas = [...new Set(universities.map(item => item.UniversityArea))]//universities.map(item=>item.UniversityArea);
@@ -236,7 +256,7 @@ export const universityDelete = (universityId) => {
 }
 }
 
-// Audit Planning Actions
+/**Audit Planning Actions */ 
 const auditAddSuccess = (auditPlan) => {
   return {
     type: AUDITPLAN_ADD_SUCCESS,
@@ -263,8 +283,9 @@ export const auditAdd = (auditData) => {
   }
 }
 
-const fetchAuditPlansSuccess = (auditplans) => {
 
+const fetchAuditPlansSuccess = (auditplans) => {
+ debugger;
   return {
     type: FETCH_AUDITPLANS_SUCCESS,
     auditplans,
@@ -456,7 +477,196 @@ export const fetchUserEmails = () => {
   }
 }
 
+/** ISSUES ACTIONS */
 
+const fetchIssuesSuccess = (issues) => {
+  return {
+    type: FETCH_ISSUES_SUCCESS,
+    issues
+  }
+}
+
+const fetchIssuesInit = () => {
+  return {
+    type: FETCH_ISSUES_INIT
+  }
+}
+
+const fetchIssuesFail = (errors) => {
+  return {
+    type: FETCH_ISSUES_FAIL,
+    errors
+  }
+}
+
+export const fetchIssues = () => {
+  const url = '/api/v1/issues';
+  return dispatch => {
+    dispatch(fetchIssuesInit());
+    axios.get(url)
+    .then(res => res.data )
+    .then(issues => dispatch(fetchIssuesSuccess(issues)))
+    .catch(({response}) => dispatch(fetchIssuesFail(response.data.errors)))
+  }
+}
+
+const issuesAddSuccess = (issueData) => {
+  debugger;
+  return {
+    type: ISSUES_ADD_SUCCESS,
+    issueData
+  }
+}
+
+const issuesAddFail = (errors) => {
+  debugger;
+  return {
+    type: ISSUES_ADD_FAIL,
+    errors
+  }
+}
+
+
+export const issuesAdd = (issueData) => {
+  debugger;
+  return dispatch => {
+  return axios.post('/api/v1/issues/create', issueData).then(
+    res => res.data)
+    .then(issueData => dispatch(issuesAddSuccess(issueData)))
+    .catch(({response}) => {
+      dispatch(issuesAddFail(response.data.errors));
+    })
+  }
+}
+
+const fetchIssuesByIdInit = () => {
+  return {
+    type:FETCH_ISSUESBYID_INIT
+  }
+}
+
+const fetchIssuesByIdSucces = (issueData) => {
+  debugger;
+  var newData = {
+      Recommendation: issueData.Recommendation,
+      status: issueData.status,
+      RiskLevel: issueData.RiskLevel,
+      ManagementResponse: issueData.ManagementResponse,
+      CompletionDate: issueData.CompletionDate? issueData.CompletionDate:"",
+      AssignedTo: issueData.AssignedTo? issueData.AssignedTo:"",
+      IssueManager: issueData.IssueManager? issueData.IssueManager:"",
+      RevisedCompletionDate: issueData.RevisedCompletionDate? issueData.RevisedCompletionDate:"",
+      FollowUpTesting: issueData.FollowUpTesting,
+      ImplementationDate: issueData.ImplementationDate? issueData.ImplementationDate:"",
+      ClosedDate: issueData.ClosedDate? issueData.ClosedDate:"",
+  }
+  return {
+    type:FETCH_ISSUESBYID_SUCCESS,
+    newData
+  }
+}
+
+const fetchIssuesByIdFail = (errors) => {
+  debugger;
+  return {
+    type:FETCH_ISSUESBYID_FAIL,
+    errors
+  }
+}
+
+export const fetchIssuesById = (issueId) => {
+  debugger;
+  const url = `/api/v1/issues/${issueId}`;
+  return dispatch => {
+    dispatch(fetchIssuesByIdInit());
+    axios.get(url)
+    .then(res => res.data )
+    .then(issueData => dispatch(fetchIssuesByIdSucces(issueData)))
+    .catch(({response}) => dispatch(fetchIssuesByIdFail(response.data.errors)))
+  }
+}
+
+const issueUpdateSucces = (updatedIssue) => {
+  return {
+    type: ISSUES_UPDATE_SUCCESS,
+    updatedIssue
+  }
+}
+
+const issueUpdateFail = (errors) => {
+  return {
+    type: ISSUES_UPDATE_FAIL,
+    errors
+  }
+}
+
+export const issueUpdate = (id,updatedIssue) => dispatch => {
+  return axiosInstance.patch(`/issues/${id}`, updatedIssue)
+    .then(res=>res.data)
+    .then(updatedIssue => {
+     dispatch(issueUpdateSucces(updatedIssue));})
+    .catch(({response}) => dispatch(issueUpdateFail(response.data.errors)))
+}
+
+const issueDeleteSuccess = (issueId) => {
+  debugger;
+  return {
+    type: ISSUES_DELETE_SUCCESS,
+    issueId
+  } 
+}
+
+const issueDeleteFail = (errors) => {
+  return {
+    type: ISSUES_DELETE_FAIL,
+    errors
+  }
+}
+
+export const issueDelete = (issueId) => {
+  return  dispatch => {
+  axiosInstance.delete(`/issues/${issueId}`)
+  .then(res => res.data)
+  .then(issues => {
+    dispatch(issueDeleteSuccess(issueId));})
+    .catch(({response}) => dispatch(issueDeleteFail(response.data.errors)))
+
+}
+}
+
+const IssueUserFail = (errors) => {
+  return {
+    type: ISSUES_USERS_FAIL,
+    errors
+  }
+}
+
+const IssueUserSuccess = (emails) => {
+  debugger;
+ // let values = []
+  emails.unshift('Select');
+  return {
+    type: ISSUES_USERS_SUCCESS,
+    emails
+  }
+}
+
+const IssueUserInit = () => {
+  return {
+    type:ISSUES_USERS_INIT
+  }
+}
+
+export const IssueUserEmails = () => {
+  const url = '/api/v1/auditplans/users';
+  return dispatch => {
+    dispatch(IssueUserInit());
+    axios.get(url)
+    .then(res => res.data)
+    .then(emails => dispatch(IssueUserSuccess(emails)))
+    .catch(({response}) => dispatch(IssueUserFail(response.data.errors)))
+  }
+}
 
 
 

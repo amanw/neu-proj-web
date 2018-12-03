@@ -46,7 +46,6 @@ export const universityReducer = (state = INITIAL_STATE.universities, action) =>
       case UNIVERSITIES_UPDATE_FAIL:
        return Object.assign({}, state, {errors: action.errors, data: [], universityOwners: [], universityAreas: [], redirectAdd:false,redirectEdit:false});
       case UNIVERSITIES_DELETE_SUCCESS:
-      var test = state.data.filter(({ _id }) => _id !== action.universityId);
       return Object.assign({}, state, {errors: [], data: state.data.filter(({ _id }) => _id !== action.universityId ), universityOwners: [], universityAreas: [], redirectAdd:false,redirectEdit:false});
       default:
         return state;

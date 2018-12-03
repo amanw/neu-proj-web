@@ -1,11 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import * as actions from 'actions';
-import { Redirect } from 'react-router-dom';
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css' // Import css
-import { ToastContainer, toast } from 'react-toastify';
 
 class UniversityList extends React.Component {
 
@@ -20,9 +18,8 @@ class UniversityList extends React.Component {
             defaultSortName: '_id',  // default sort column name
             defaultSortOrder: 'desc'  // default sort order
           };
-
-       
     }
+    
     componentWillMount() {
         this.props.dispatch(actions.fetchUniversities());
       }

@@ -31,7 +31,7 @@ class Login extends React.Component {
           <div className="row">
             <div className="col-md-12 col-md-offset-3">
             <img className="img-fluid mx-auto d-block mb-5" 
-            src={process.env.PUBLIC_URL + '/img/logo.png'}></img>
+            src={process.env.PUBLIC_URL + '/img/logo.png'} alt="NEU"></img>
               <h1 className="login-h1">Login</h1>
               {
                 successRegister &&

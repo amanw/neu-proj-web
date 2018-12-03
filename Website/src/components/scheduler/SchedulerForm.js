@@ -3,12 +3,11 @@ import { Field, reduxForm } from 'redux-form';
 import { BwmResError } from 'components/shared/form/BwmResError';
 import {BwmMultiSelect} from 'components/shared/form/BwmMultiSelect';
  import { required } from 'components/shared/form/validators';
-// import { connect } from 'react-redux';
-var valid = false;
+
 
 
 let SchedulerForm = props => {
-  const { handleSubmit, pristine, submitting, submitCb, options,valid,options1, errors } = props
+  const { handleSubmit, pristine, submitting, submitCb, options,valid, errors } = props
 
   return (
     <form onSubmit={handleSubmit(submitCb)}>

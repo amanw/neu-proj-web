@@ -10,17 +10,6 @@ const UniversityAddForm = props => {
   const { handleSubmit, pristine, submitting, submitCb, valid, options,options1, errors } = props
   return (
     <form onSubmit={handleSubmit(submitCb)}>
-    {/* <Field
-        name="University"
-        type="text"
-        label='University'
-        className='form-control form-control-lg'
-        component={BwmInput}
-        validate={[required]}
-        input = {{disabled:true}}
-        placeholder = "Northeastern University"
-        value= "test"
-      /> */}
        <Field
        options = {options}
         name="UniversityArea"

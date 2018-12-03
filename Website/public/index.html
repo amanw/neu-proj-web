@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <script src="%PUBLIC_URL%/js/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script>
+      // before React is loaded
+      if ( window.location.port === 3000) {
+          window.__REACT_DEVTOOLS_GLOBAL_HOOK__.inject = function() {};
+      }
+  </script>
     <script src="%PUBLIC_URL%/js/bootstrap.min.js"></script>
     <!-- <script src="https://npmcdn.com/react-bootstrap-table/dist/react-bootstrap-table.min.js" />
     <script>

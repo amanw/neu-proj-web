@@ -5,7 +5,6 @@ import * as actions from 'actions';
 import { connect } from 'react-redux';
 var errors = "";
 /*Todo common event and Control function */
-const re = RegExp('^(?:[0-9]|0[1-9])$');
  class Scheduler extends React.Component {
 
   constructor() {
@@ -31,13 +30,13 @@ const re = RegExp('^(?:[0-9]|0[1-9])$');
     var emptyObject = isEmpty(auditData);
     if(!emptyObject)
     {
-    if(auditData != null && auditData.user_ids!="" && auditData.length!=0){
+    if(auditData !== null && auditData.user_ids!=="" && auditData.length!==0){
       var user_array = "";
       this.setState({isValidate:true});
       var len = auditData.user_ids.length
       for(var x = 0; x<len; x++ ) {
         var new_array = auditData.user_ids[x].toString().split(',');
-        if(user_array!=""){
+        if(user_array!==""){
         user_array = user_array +","+ new_array[0];
         }
         else {
@@ -76,7 +75,7 @@ const re = RegExp('^(?:[0-9]|0[1-9])$');
             <li className="breadcrumb-item active" aria-current="page"><i className="fas fa-plus"/><span> Audit Add Data </span></li>
          </ol>
       </nav>
-      { this.state.isValidate == false &&
+      { this.state.isValidate === false &&
           <div class="alert alert-danger alert-dismissible fade show" role="alert">
           <strong>Please Enter the Auditors to Schedule!</strong> No Data Entered
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">

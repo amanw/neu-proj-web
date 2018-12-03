@@ -10,10 +10,14 @@ export default function configureStore() {
   return createStore(
     rootReducer,
     compose(
-      applyMiddleware(thunk, reduxImmutableStateInvariant()), DevTools.instrument())
+      applyMiddleware(thunk, reduxImmutableStateInvariant()),DevTools.instrument())
   );
 }
 
+
+//compose(
+  //applyMiddleware(thunk, reduxImmutableStateInvariant()), DevTools.instrument())
+  //);
 // const middleware = applyMiddleware(thunk, immutableState());
 
 // const storeFactory = compose(middleware, DevTools.instrument())(createStore);

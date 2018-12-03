@@ -1,7 +1,6 @@
 import React from 'react';
 
 export function BwmResError(props) {
-  debugger;
   let errors = props.errors;
   if (typeof errors != "undefined") {
   return (

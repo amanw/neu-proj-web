@@ -18,7 +18,6 @@ import {
    FETCH_USEREMAILS_SUCCESS,
    FETCH_USEREMAILS_FAIL
   } from '../actions/types'
-import { stat } from 'fs';
 
 const INITIAL_STATE = {
 auditplansAdd:{
@@ -73,6 +72,7 @@ export const auditplanListReducer = (state = INITIAL_STATE.auditplans, action) =
    case FETCH_AUDITPLANS_INIT:
    return Object.assign({}, state, {data:[],errors:[],auditData:[],isEdited:false})
    case FETCH_AUDITPLANS_SUCCESS:
+   debugger;
    return Object.assign({}, state, {data: action.auditplans,errors:[],auditData:[],isEdited:false})
    case FETCH_AUDITPLANS_FAIL:
    return Object.assign({}, state, {data:[],errors: action.errors,auditData:[],isEdited:false})
@@ -87,7 +87,6 @@ export const auditplanListReducer = (state = INITIAL_STATE.auditplans, action) =
    case FETCH_AUDITPLANBYID_FAIL:
    return Object.assign({}, state, {data:[],errors:action.errors,auditData:[],isEdited:false})
    case AUDITPLAN_UPDATE_SUCCESS:
-   debugger;
    return Object.assign({}, state, {data:[],errors:[],auditData:action.updatedaudit,isEdited:true})
    case AUDITPLAN_UPDATE_FAIL:
    return Object.assign({}, state, {data:[],errors:action.errors,auditData:[],isEdited:false})

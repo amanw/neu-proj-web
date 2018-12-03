@@ -10,8 +10,8 @@ import { connect } from 'react-redux';
     super();
 
     this.universityAdd = this.universityAdd.bind(this);
-
   }
+
   componentWillMount() {
     this.props.dispatch(actions.fetchUniversities());
   }

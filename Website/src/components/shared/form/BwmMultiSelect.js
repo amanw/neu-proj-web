@@ -23,7 +23,7 @@ export const BwmMultiSelect = ({
       <label>{label}</label>
       <div className='input-group'>
         <Multiselect {...input} className={className}
-        onBlur={() => input.onBlur()}
+        onBlur={() => input.onBlur()} 
         value={input.value || []} // requires value to be an array
         {...rest}
         />

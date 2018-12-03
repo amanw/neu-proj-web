@@ -333,8 +333,7 @@ a:focus {
 main {
   height: 100%;
   text-align: center;
-  overflow: scroll;
-  min-height: 700px; }
+  overflow-y: scroll; }
 
 h1 {
   font-weight: 800;
@@ -650,3 +649,17 @@ label {
 
 .page-item.active .page-link {
   z-index: 0 !important; }
+
+.react-bs-table-container {
+  min-height: 700px;
+  overflow: auto;
+  height: 100%; }
+
+#issue {
+  max-height: 500px;
+  overflow: auto; }
+
+#audiplanedit {
+  max-height: 500px;
+  height: auto;
+  overflow: auto; }

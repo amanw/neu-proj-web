@@ -1,11 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import * as actions from 'actions';
-import { Redirect } from 'react-router-dom';
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css' // Import css
-import { ToastContainer, toast } from 'react-toastify';
 
 class AuditPlanList extends React.Component {
 
@@ -48,6 +46,7 @@ class AuditPlanList extends React.Component {
     // Lifecycle 
     componentWillMount() {
         this.props.dispatch(actions.fetchAuditPlans());
+        console.log(this.props.auditplans);
       }
     
     componentDidMount() {
@@ -92,10 +91,18 @@ class AuditPlanList extends React.Component {
         let path = `/scheduler/${row._id}`;
         this.props.history.push(path);
       }
+      handleissueAdd(row){
+        let path = `/issues/new/${row._id}`;
+        this.props.history.push(path);
+      }
 
       auditorsFormatter(cell){
-          var newStr = cell.replace(/,/g, '-');
-          return newStr;
+          debugger;
+          var newStr = "";
+          if(cell !== undefined){
+           newStr = cell.replace(/,/g, '-');
+          }
+          return newStr ;
       }
     
 
@@ -123,6 +130,13 @@ class AuditPlanList extends React.Component {
             onClick={() => 
             this.handleauditPlan(row)}>
             <span><i className="fa glyphicon glyphicon-calendar fa-calendar"></i>Schedule</span>
+         </button>
+         <button 
+            type="button"
+            className="btn btn-info react-bs-table-info-btn delbutton" 
+            onClick={() => 
+            this.handleissueAdd(row)}>
+            <span><i className="fa glyphicon glyphicon-file fas-file-contract"></i>Add Issue</span>
          </button>
         </div>
         )

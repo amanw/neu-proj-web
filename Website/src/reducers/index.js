@@ -3,6 +3,7 @@ import {authReducer} from './auth-reducer';
 import {universityReducer, universityEditReducer } from './university-reducer'
 import { reducer as formReducer } from 'redux-form';
 import {auditplanReducer, auditplanStatusReducer,auditplanListReducer} from './auditplan-reducer'
+import {issueReducer, issueListReducer,issueUserReducer} from './issue-reducer';
 
 const rootReducer = combineReducers({
   auth:authReducer,
@@ -11,7 +12,10 @@ const rootReducer = combineReducers({
   universityData: universityEditReducer,
   auditPlan: auditplanReducer,
   auditPlanStatus: auditplanStatusReducer,
-  auditPlanList:auditplanListReducer
+  auditPlanList:auditplanListReducer,
+  issueAdd:issueReducer,
+  issueList:issueListReducer,
+  issueUser:issueUserReducer
 });
 
 export default rootReducer;

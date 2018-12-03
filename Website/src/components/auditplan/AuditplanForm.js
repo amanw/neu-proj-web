@@ -2,10 +2,8 @@ import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { BwmInput } from 'components/shared/form/BwmInput';
 import { BwmSelect } from 'components/shared/form/BwmSelect';
-import { BwmTextArea } from 'components/shared/form/BwmTextArea';
 import { BwmResError } from 'components/shared/form/BwmResError';
 import { required } from 'components/shared/form/validators';
-import { connect } from 'react-redux';
 
 
 let AuditPlanForm = props => {

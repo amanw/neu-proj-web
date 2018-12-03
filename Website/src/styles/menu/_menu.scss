@@ -16,8 +16,7 @@ a:focus {
 main {
   height: 100%;
   text-align: center;
-  overflow: scroll;
-  min-height: 700px;
+  overflow-y: scroll;
 }
 h1 {
   font-weight: 800;

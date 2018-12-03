@@ -59,6 +59,31 @@ label {
   z-index: 0 !important;
 }
 
+.react-bs-table-container {
+  min-height: 700px;
+  overflow: auto;
+  height: 100%;
+}
+
+#issue {
+ // min-height: 500px;
+  //height: 1000px;
+  max-height: 500px;
+  overflow: auto;
+}
+
+// #auditplan {
+//   max-height: 500px;
+//   height: auto;
+//   overflow: auto;
+// }
+
+#audiplanedit {
+  max-height: 500px;
+  height: auto;
+  overflow: auto;
+}
+
 
 
 

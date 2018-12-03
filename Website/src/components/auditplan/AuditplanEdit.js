@@ -56,7 +56,6 @@ const re = RegExp('^(?:[0-9]|0[1-9])$');
       unversitydata_id:this.props.auditPlan.auditData.unversitydata_id,
       status:auditData.status
     }
-    //const {auditPlan.auditData: {_id}, dispatch } = this.props;
     this.props.dispatch(actions.auditPlanUpdate(this.props.match.params.id,data));
   }
  updateResidualRisk(){
@@ -74,7 +73,7 @@ const re = RegExp('^(?:[0-9]|0[1-9])$');
 
   updateInternal(event){
     var val = parseInt(event.target.value);
-    if(event.target.value != ""  && re.test(val))
+    if(event.target.value !== ""  && re.test(val))
     {
       var res = parseInt(this.state.ControlledRisk);
       var sum = val + res;
@@ -94,7 +93,7 @@ const re = RegExp('^(?:[0-9]|0[1-9])$');
 
   updateLastAudit(event){
     var val = parseInt(event.target.value);
-    if(event.target.value != "" && re.test(val))
+    if(event.target.value !== "" && re.test(val))
     {
       var res = parseInt(this.state.ControlledRisk);
       var sum = val + res;
@@ -164,7 +163,7 @@ const re = RegExp('^(?:[0-9]|0[1-9])$');
   updateInput(event){
     debugger;
     var val = parseInt(event.target.value);
-    if(event.target.value != "" && re.test(val))
+    if(event.target.value !== "" && re.test(val))
     {
       
       var res = parseInt(this.state.InheritedRisk);
@@ -186,7 +185,7 @@ const re = RegExp('^(?:[0-9]|0[1-9])$');
   }
   updateComplexity(event){
     var val = parseInt(event.target.value);
-    if(event.target.value != "" && re.test(val))
+    if(event.target.value !== "" && re.test(val))
     {
     
     var res = parseInt(this.state.InheritedRisk);
@@ -205,7 +204,7 @@ const re = RegExp('^(?:[0-9]|0[1-9])$');
   }
   updateFinancing(event){
     var val = parseInt(event.target.value);
-    if(event.target.value != "" && re.test(val))
+    if(event.target.value !== "" && re.test(val))
     {
       
       var res = parseInt(this.state.InheritedRisk);
@@ -237,7 +236,7 @@ const re = RegExp('^(?:[0-9]|0[1-9])$');
          </ol>
       </nav>
       
-      <section id='register'>
+      <section id='audiplanedit'>
          <div className='bwm-form'>
             <div className='row'>
             
