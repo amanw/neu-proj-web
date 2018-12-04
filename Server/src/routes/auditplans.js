@@ -164,9 +164,9 @@ router.post('/getGraphData',function(req,res){
                 }
 
               var newData = {
-                  title:"Planned Audits",
+                  label:"Planned Audits",
                   value:foundAudits.length,
-                  color:"red"
+                  className:"planned-color"
               }
               console.log("NEW DATA FOR PLANNED");
               console.log(newData);
@@ -181,28 +181,77 @@ router.post('/getGraphData',function(req,res){
            .exec(function(err,foundAudits){
 
               if (err) {
-                  return res.status(422).send({errors: [{title: 'test Audit Plan Data Error!', detail: 'Could not find this Data!'}]});
+                  return res.status(422).send({errors: [{title: 'Scheduled Audit Plan Data Error!', detail: 'Could not find this Data!'}]});
                 }
               // if (foundAudits.length === 0) {
               //     return res.status(422).send({errors: [{title: 'test Audit Plan Data Error!', detail: 'Could not find this Data!'}]});
               // }
 
               var newData = {
-                  title:"Scheduled Audits",
+                  label:"Scheduled Audits",
                   value:foundAudits.length,
-                  color:"red"
+                  className:"scheduled-color"
               }
               if(newData != null){
                   res_data.push(newData);
-                  plannedstatus = false;
-                  scheduledstatus = true;
-                  auditStatus = "scheduled";
+                  scheduledstatus = false;
+                  auditStatus = "ongoing";
                   query = auditStatus ? {status: auditStatus.toLowerCase()} : {};
               }
               
-              if(scheduledstatus) {
-                return  res.status(200).send(res_data);
-              }
+              AuditPlan.find(query)
+              .exec(function(err,foundAudits){
+   
+                 if (err) {
+                     return res.status(422).send({errors: [{title: 'Scheduled Audit Plan Data Error!', detail: 'Could not find this Data!'}]});
+                   }
+                 // if (foundAudits.length === 0) {
+                 //     return res.status(422).send({errors: [{title: 'test Audit Plan Data Error!', detail: 'Could not find this Data!'}]});
+                 // }
+   
+                 var newData = {
+                     label:"Ongoing Audits",
+                     value:foundAudits.length,
+                     className:"ongoing-color"
+                 }
+                 if(newData != null){
+                     res_data.push(newData);
+                     plannedstatus = false;
+                     scheduledstatus = false;
+                     auditStatus = "Closed";
+                     query = auditStatus ? {status: auditStatus.toLowerCase()} : {};
+                 }
+
+                 AuditPlan.find(query)
+              .exec(function(err,foundAudits){
+   
+                 if (err) {
+                     return res.status(422).send({errors: [{title: 'Scheduled Audit Plan Data Error!', detail: 'Could not find this Data!'}]});
+                   }
+                 // if (foundAudits.length === 0) {
+                 //     return res.status(422).send({errors: [{title: 'test Audit Plan Data Error!', detail: 'Could not find this Data!'}]});
+                 // }
+   
+                 var newData = {
+                     label:"Closed Audits",
+                     value:foundAudits.length,
+                     className:"closed-color"
+                 }
+                 if(newData != null){
+                     res_data.push(newData);
+                     plannedstatus = false;
+                     scheduledstatus = true;
+                     auditStatus = "scheduled";
+                     query = auditStatus ? {status: auditStatus.toLowerCase()} : {};
+                 }
+                 
+                 if(scheduledstatus) {
+                   return  res.status(200).send(res_data);
+                 }
+
+                });
+
+              });
                
   });
   
