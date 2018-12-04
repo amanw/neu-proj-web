@@ -4,6 +4,7 @@
 @import 'form/form.scss';
 @import 'menu/normalize.scss';
 @import 'menu/menu.scss';
+@import 'index.scss';
 @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
 
 label {
@@ -68,7 +69,7 @@ label {
 #issue {
  // min-height: 500px;
   //height: 1000px;
-  max-height: 500px;
+  max-height: 450px;
   overflow: auto;
 }
 

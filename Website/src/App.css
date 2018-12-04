@@ -609,6 +609,30 @@ h1 {
   box-shadow: inset 0 -1px rgba(0, 0, 0, 0);
   color: #b8b7ad; }
 
+h2.card-header {
+  border-bottom: 1px solid #ebeff2;
+  padding: 19px 0;
+  text-align: center;
+  color: #59687f;
+  font-size: 600;
+  font-size: 19px;
+  position: relative; }
+
+.plannedCard {
+  padding-bottom: 100px; }
+
+.planned-color {
+  fill: #363033; }
+
+.closed-color {
+  fill: #cc0000; }
+
+.scheduled-color {
+  fill: #ff8533; }
+
+.ongoing-color {
+  fill: #66cc99; }
+
 label {
   font-size: 14px; }
 
@@ -656,7 +680,7 @@ label {
   height: 100%; }
 
 #issue {
-  max-height: 500px;
+  max-height: 450px;
   overflow: auto; }
 
 #audiplanedit {

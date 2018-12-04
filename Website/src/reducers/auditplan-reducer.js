@@ -16,7 +16,13 @@ import {
    AUDITPLAN_UPDATE_FAIL,
    FETCH_USEREMAILS_INIT,
    FETCH_USEREMAILS_SUCCESS,
-   FETCH_USEREMAILS_FAIL
+   FETCH_USEREMAILS_FAIL,
+   FETCH_AUDITSCHEDULEDSTATUS_INIT,
+   FETCH_AUDITSCHEDULEDSTATUS_SUCCESS,
+   FETCH_AUDITSCHEDULEDSTATUS_FAIL,
+   GRAPH_INIT,
+   GRAPH_SUCCESS,
+   GRAPH_FAIL
   } from '../actions/types'
 
 const INITIAL_STATE = {
@@ -40,6 +46,16 @@ auditPlannedStatus:{
   data:[],
   errors:[]
 },
+auditScheduledStatus:{
+  data:[],
+  errors:[]
+},
+
+donotData:{
+  data:[],
+  errors:[]
+}
+
 
 }
 
@@ -65,6 +81,35 @@ switch(action.type) {
  default:
  return state;
 }
+
+}
+
+export const auditscheduledStatusReducer = (state = INITIAL_STATE.auditScheduledStatus, action) => {
+  switch(action.type) {
+     case FETCH_AUDITSCHEDULEDSTATUS_INIT:
+     return Object.assign({}, state, {data:[],errors:[]})
+     case FETCH_AUDITSCHEDULEDSTATUS_SUCCESS:
+     debugger;
+     return Object.assign({}, state, {data: action.auditScheduledStatus,errors:[]})
+     case FETCH_AUDITSCHEDULEDSTATUS_FAIL:
+     return Object.assign({}, state, {data:[],errors: action.errors})
+     default:
+     return state;
+  }  
+}
+
+export const auditGraphDataReducer = (state = INITIAL_STATE.donotData, action) => {
+  switch(action.type) {
+     case GRAPH_INIT:
+     return Object.assign({}, state, {data:[],errors:[]})
+     case GRAPH_SUCCESS:
+     debugger;
+     return Object.assign({}, state, {data: action.graphData,errors:[]})
+     case GRAPH_FAIL:
+     return Object.assign({}, state, {data:[],errors: action.errors})
+     default:
+     return state;
+  }  
 }
 
 export const auditplanListReducer = (state = INITIAL_STATE.auditplans, action) => {

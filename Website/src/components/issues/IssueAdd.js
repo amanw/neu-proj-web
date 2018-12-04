@@ -65,7 +65,7 @@ import { connect } from 'react-redux';
             </div>
             <div className='col-md-6 ml-auto'>
               <div className='image-container'>
-                <h2 className='catchphrase'>This is how you will create a new Unversity to add to the Audit Plan.</h2>
+                <h2 className='catchphrase'>This is how you will create a new Issues to add to the Audit Plan.</h2>
                 {/* <img src={process.env.PUBLIC_URL + '/img/register-image.jpg'} alt=""/> */}
               </div>
             </div>

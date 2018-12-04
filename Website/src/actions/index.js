@@ -50,7 +50,13 @@ import {
          ISSUES_UPDATE_SUCCESS,
          ISSUES_USERS_INIT,
          ISSUES_USERS_SUCCESS,
-         ISSUES_USERS_FAIL
+         ISSUES_USERS_FAIL,
+         FETCH_AUDITSCHEDULEDSTATUS_INIT,
+         FETCH_AUDITSCHEDULEDSTATUS_SUCCESS,
+         FETCH_AUDITSCHEDULEDSTATUS_FAIL,
+         GRAPH_INIT,
+         GRAPH_SUCCESS,
+         GRAPH_FAIL
          } from './types';
 
 const axiosInstance = axiosService.getInstance();
@@ -346,6 +352,38 @@ export const fetchAuditPlannedStatus = (status) => {
     .then(res => res.data )
     .then(auditPlannedStatus => dispatch(fetchAuditPlannedStatusSuccess(auditPlannedStatus)))
     .catch(({response}) => dispatch(fetchAuditPlannedStatusFail(response.data.errors)))
+  }
+}
+
+const fetchAuditScheduledStatusInit = () => {
+  return {
+    type: FETCH_AUDITSCHEDULEDSTATUS_INIT
+  }
+}
+
+const fetchAuditScheduledStatusSuccess = (auditScheduledStatus) => {
+
+  return {
+    type: FETCH_AUDITSCHEDULEDSTATUS_SUCCESS,
+    auditScheduledStatus,
+  }
+}
+
+const fetchAuditScheduledStatusFail = (errors) => {
+  return {
+    type: FETCH_AUDITSCHEDULEDSTATUS_FAIL,
+    errors
+  }
+}
+
+export const fetchAuditScheduledStatus = (status) => {
+  const url = `/api/v1/auditplans/getStatus/${status}`;
+  return dispatch => {
+    dispatch(fetchAuditScheduledStatusInit());
+    axios.get(url)
+    .then(res => res.data )
+    .then(auditScheduledStatus => dispatch(fetchAuditScheduledStatusSuccess(auditScheduledStatus)))
+    .catch(({response}) => dispatch(fetchAuditScheduledStatusFail(response.data.errors)))
   }
 }
 
@@ -665,6 +703,43 @@ export const IssueUserEmails = () => {
     .then(res => res.data)
     .then(emails => dispatch(IssueUserSuccess(emails)))
     .catch(({response}) => dispatch(IssueUserFail(response.data.errors)))
+  }
+}
+
+
+const fetchgraphInit = () => {
+  return {
+    type: GRAPH_INIT
+  }
+}
+
+const fetchgraphFail = (errors) => {
+  debugger;
+  return {
+    type: GRAPH_FAIL,
+    errors
+  }
+}
+
+const fetchgraphSuccess = (graphData) => {
+  debugger;
+  return {
+    type: GRAPH_SUCCESS,
+    graphData
+  }
+}
+
+
+
+export const fetchGraph = () => {
+  debugger;
+  const url = '/api/v1/auditplans/getGraphData';
+  return dispatch => {
+    dispatch(fetchgraphInit());
+    axios.post(url)
+    .then(res => res.data )
+    .then(graphData => dispatch(fetchgraphSuccess(graphData)))
+    .catch(({response}) => dispatch(fetchgraphFail(response.data.errors)))
   }
 }
 
